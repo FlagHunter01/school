@@ -19,7 +19,8 @@ edit_uri: edit/main/docs/
 
 nav:
     - Accueil: index.md
-    - M1:
+    - M1: 
+      - m1.md
       - Anglais: cfa/anglais.md
       - Language C: cfa/c/c.md
       - BDD: cfa/bdd.md
