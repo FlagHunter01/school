@@ -21,10 +21,11 @@ nav:
     - Accueil: index.md
     - M1: 
       - m1.md
-      - Anglais: cfa/anglais.md
-      - Language C: cfa/c/c.md
-      - BDD: cfa/bdd.md
-      - Sécurité Linux: cfa/secu.md
+      - CFA:
+        - Anglais: cfa/anglais.md
+        - Language C: cfa/c/c.md
+        - BDD: cfa/bdd.md
+        - Sécurité Linux: cfa/secu.md
 #      - CCNA 1: cfa/ccna1.md
 #    - CCNA 2:
 #       - cfa/ccna2/index.md
@@ -57,9 +58,10 @@ nav:
 #      - 9 - Concepts QoS: cfa/ccna3/9.md
 #    - CCNA 3 - REPONSES: cfa/ccna3/rep.md
 #    - Université:
-      - Réseau: uni/reseau.md
-      - Maths: uni/maths.md
-      - Sécurité: uni/securite.md
+      - Université:
+        - Réseau: uni/reseau.md
+        - Maths: uni/maths.md
+        - Sécurité: uni/securite.md
     - Misc: misc.md
 
 
