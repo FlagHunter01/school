@@ -2,14 +2,7 @@
 title: Bienvenue dans mon bordel scolaire
 ---
 
-!!! tip "Télécharge ce site pour l'utiliser hors ligne!"
-    C'est particulièrement pratique pour CCNA par exemple :smirk:
-
-     - [x] Rends-toi sur la [page des realeases](https://github.com/FlagHunter01/school/releases)
-     - [x] Télécharge la dernière version et extrais-la
-     - [x] Ouvre `index.html` avec un navigateur, tu pourras l'utiliser de la même façon que le site en ligne
-
-!!! info inline end "Le site est hebergé directement sur Github"
+!!! info "Le site est hebergé directement sur Github"
     [![ci](https://github.com/FlagHunter01/school/actions/workflows/ci.yml/badge.svg)](https://github.com/FlagHunter01/school/actions/workflows/ci.yml)
 
     On peut faire des modifications **en live** en éditant [le projet associé](https://github.com/FlagHunter01/school) grâce aux icônes :material-file-document-edit-outline:.
