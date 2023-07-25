@@ -21,7 +21,7 @@ banner motd #R1#
 ip domain name cisco.com
 crypto key generate rsa general-keys modulus 2048
 username Admin secret cisco
-ssh version 2
+ip ssh version 2
 line vty 0 15
 transport input ssh
 
