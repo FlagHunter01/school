@@ -24,6 +24,7 @@ username Admin secret cisco
 ip ssh version 2
 line vty 0 15
 transport input ssh
+exit
 
 int GigabitEthernet0/0
 description LAN
@@ -62,6 +63,7 @@ username Admin secret cisco
 ip ssh version 2
 line vty 0 15
 transport input ssh
+exit
 
 int GigabitEthernet0/0
 description LAN
@@ -137,6 +139,7 @@ username Admin secret cisco
 ip ssh version 2
 line vty 0 15
 transport input ssh
+exit
 
 int GigabitEthernet0/0
 description LAN
