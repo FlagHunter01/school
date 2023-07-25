@@ -1,5 +1,7 @@
 # Paramétrage matériels
 
+!!! tip "[DL MON DELIRE ICI](conf_base.pkt)"
+
 ## Site local
 
 ### R1
