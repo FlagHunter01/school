@@ -75,8 +75,6 @@ ip address 80.0.0.2 255.255.255.0
 no shutdown
 exit
 
-ip route 10.10.10.0 255.255.255.0 80.0.0.3
-exit
 exit
 wr
 ```
