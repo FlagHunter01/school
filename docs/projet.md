@@ -16,16 +16,19 @@ hostname R1
 no ip domain lookup
 enable secret OATE
 banner motd #R1#
+
 int GigabitEthernet0/0/0
 description LAN
 ip address 172.16.1.252 255.255.255.0
 no shut
 exit
+
 int GigabitEthernet0/0/1
 description WAN
 ip address 80.0.0.1 255.255.255.0
 no shut
 exit
+
 ip route 10.10.10.0 255.255.255.0 80.0.0.3
 ip dhcp excluded-address 172.16.1.201 172.16.1.255
 ip dhcp pool local
