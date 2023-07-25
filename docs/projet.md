@@ -118,6 +118,8 @@ wr
 
 ### RA
 
+!!! warning "DHCP en suspens pour l'instant"
+
 ```sh
 en
 conf t
@@ -136,10 +138,10 @@ ip address 10.10.10.254 255.255.255.0
 no shut
 exit
 ip route 172.16.1.0 255.255.255.0 80.0.0.1
-ip dhcp excluded-address 10.10.10.201 10.10.10.255
-ip dhcp pool distant
-network 10.10.10.0 255.255.255.0
-default-router 10.10.10.254
+#ip dhcp excluded-address 10.10.10.201 10.10.10.255
+#ip dhcp pool distant
+#network 10.10.10.0 255.255.255.0
+#default-router 10.10.10.254
 exit
 exit
 wr
