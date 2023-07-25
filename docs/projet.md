@@ -18,6 +18,7 @@ no ip domain lookup
 enable secret OATE
 banner motd #R1#
 
+ip domain name cisco.com
 crypto key generate rsa general-keys modulus 2048
 username Admin secret cisco
 ssh version 2
@@ -55,6 +56,7 @@ no ip domain lookup
 enable secret OATE
 banner motd #R2#
 
+ip domain name cisco.com
 crypto key generate rsa general-keys modulus 2048
 username Admin secret cisco
 ip ssh version 2
@@ -129,6 +131,7 @@ no ip domain lookup
 enable secret OATE
 banner motd #RA#
 
+ip domain name cisco.com
 crypto key generate rsa general-keys modulus 2048
 username Admin secret cisco
 ip ssh version 2
