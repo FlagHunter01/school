@@ -156,7 +156,7 @@ ip route 172.16.1.0 255.255.255.0 80.0.0.1
 #ip dhcp pool distant
 #network 10.10.10.0 255.255.255.0
 #default-router 10.10.10.254
-exit
+#exit
 exit
 wr
 ```
