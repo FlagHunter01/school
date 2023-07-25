@@ -9,7 +9,7 @@ description: C'EST NOTRE PROJET!
 
 ### R1
 
-```
+```sh
 en
 conf t
 
@@ -48,7 +48,7 @@ wr
 
 !!! warning "Shut pour l'instant."
 
-```
+```sh
 en
 conf t
 
@@ -83,34 +83,36 @@ wr
 
 ### S1
 
-```
+!!! warning "DHCP disfonctionnel"
+
+```sh
 enable
 config ter
 
 hostname S1
 banner motd #S1#
 
-vlan 99
-name MANAGEMENT
-exit
+#vlan 99
+#name MANAGEMENT
+#exit
 
-int vlan 99
-ip address 172.16.1.251 255.255.255.0
-no shutdown
-exit
+#int vlan 99
+#ip address 172.16.1.251 255.255.255.0
+#no shutdown
+#exit
 
-interface range FastEthernet 1/0/1 - 48
-switchport mode access
-switchport access vlan 99
-no shutdown
-exit
+#interface range FastEthernet 1/0/1 - 48
+#switchport mode access
+#switchport access vlan 99
+#no shutdown
+#exit
 
-ip dhcp excluded-address 172.16.1.201 172.16.1.255
-ip dhcp pool local
-network 172.16.1.0 255.255.255.0
-default-router 172.16.1.252
-exit
-exit
+#ip dhcp excluded-address 172.16.1.201 172.16.1.255
+#ip dhcp pool local
+#network 172.16.1.0 255.255.255.0
+#default-router 172.16.1.252
+#exit
+#exit
 wr
 ```
 
@@ -118,7 +120,7 @@ wr
 
 ### RA
 
-```
+```sh
 en
 conf t
 hostname RA
