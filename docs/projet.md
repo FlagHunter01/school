@@ -38,8 +38,6 @@ ip address 80.0.0.1 255.255.255.0
 no shutdown
 exit
 
-ip route 10.10.10.0 255.255.255.0 80.0.0.3
-network 172.16.1.0 255.255.255.0
 default-router 172.16.1.252
 exit
 exit
