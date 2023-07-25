@@ -46,8 +46,6 @@ wr
 
 ### R2
 
-!!! warning "Shut pour l'instant."
-
 ```sh
 en
 conf t
