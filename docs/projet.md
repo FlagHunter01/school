@@ -99,7 +99,7 @@ ip address 172.16.1.251 255.255.255.0
 no shutdown
 exit
 
-interface range FastEthernet 0/1 - 24
+interface range FastEthernet 1/0/1 - 48
 switchport mode access
 switchport access vlan 99
 no shutdown
