@@ -51,23 +51,31 @@ wr
 ```
 en
 conf t
+
+crypto key generate rsa general-keys modulus 2048
+username Admin secret cisco
+ip ssh version 2
+line vty 0 15
+transport input ssh
+
 hostname R2
 no ip domain lookup
 enable secret OATE
 banner motd #R2#
-int GigabitEthernet0/0/0
+
+int GigabitEthernet0/0
 description LAN
 ip address 172.16.1.253 255.255.255.0
-shut
+no shutdown
 exit
-int GigabitEthernet0/0/1
+
+int GigabitEthernet0/1
 description WAN
 ip address 80.0.0.2 255.255.255.0
-shut
+no shutdown
 exit
+
 ip route 10.10.10.0 255.255.255.0 80.0.0.3
-ip dhcp excluded-address 172.16.1.201 172.16.1.255
-ip dhcp pool local
 network 172.16.1.0 255.255.255.0
 default-router 172.16.1.252
 exit
