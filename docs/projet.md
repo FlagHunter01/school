@@ -76,8 +76,6 @@ no shutdown
 exit
 
 ip route 10.10.10.0 255.255.255.0 80.0.0.3
-network 172.16.1.0 255.255.255.0
-default-router 172.16.1.252
 exit
 exit
 wr
@@ -85,7 +83,36 @@ wr
 
 ### S1
 
-!!! fail "Rien pour l'instant"
+```
+enable
+config ter
+
+hostname S1
+banner motd #S1#
+
+vlan 99
+name MANAGEMENT
+exit
+
+int vlan 99
+ip address 172.16.1.251 255.255.255.0
+no shutdown
+exit
+
+interface range FastEthernet 0/1 - 24
+switchport mode access
+switchport access vlan 99
+no shutdown
+exit
+
+ip dhcp excluded-address 172.16.1.201 172.16.1.255
+ip dhcp pool local
+network 172.16.1.0 255.255.255.0
+default-router 172.16.1.252
+exit
+exit
+wr
+```
 
 ## Site distant
 
