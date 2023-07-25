@@ -1,4 +1,7 @@
-# Paramétrage matériels
+---
+title: PROJET
+description: C'EST NOTRE PROJET!
+---
 
 !!! tip "[DL MON DELIRE ICI](conf_base.pkt)"
 
