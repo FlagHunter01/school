@@ -13,16 +13,16 @@ description: C'EST NOTRE PROJET!
 en
 conf t
 
+hostname R1
+no ip domain lookup
+enable secret OATE
+banner motd #R1#
+
 crypto key generate rsa general-keys modulus 2048
 username Admin secret cisco
 ssh version 2
 line vty 0 15
 transport input ssh
-
-hostname R1
-no ip domain lookup
-enable secret OATE
-banner motd #R1#
 
 int GigabitEthernet0/0
 description LAN
@@ -50,16 +50,16 @@ wr
 en
 conf t
 
+hostname R2
+no ip domain lookup
+enable secret OATE
+banner motd #R2#
+
 crypto key generate rsa general-keys modulus 2048
 username Admin secret cisco
 ip ssh version 2
 line vty 0 15
 transport input ssh
-
-hostname R2
-no ip domain lookup
-enable secret OATE
-banner motd #R2#
 
 int GigabitEthernet0/0
 description LAN
@@ -124,16 +124,16 @@ wr
 en
 conf t
 
+hostname RA
+no ip domain lookup
+enable secret OATE
+banner motd #RA#
+
 crypto key generate rsa general-keys modulus 2048
 username Admin secret cisco
 ip ssh version 2
 line vty 0 15
 transport input ssh
-
-hostname RA
-no ip domain lookup
-enable secret OATE
-banner motd #RA#
 
 int GigabitEthernet0/0
 description LAN
