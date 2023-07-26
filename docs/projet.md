@@ -49,7 +49,7 @@ exit
 #ip nat inside source list 100 interface GigabitEthernet0/1 overload 
 
 # VPN
-access-list 100 deny ip 172.16.1.0 0.0.0.255 10.1.1.0 0.0.0.255
+access-list 100 deny ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
 access-list 100 permit ip 172.16.1.0 0.0.0.255 any
 license boot module c1900 technology-package securityk9 
 
@@ -63,7 +63,7 @@ exit
 crypto isakmp key cisco1 address 80.0.0.3
 crypto ipsec transform-set MYTS esp-aes esp-sha-hmac 
 ip access-list extended VPNLIST
-permit ip 172.16.1.0 0.0.0.255 10.0.0.0 0.255.255.255
+permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
 exit
 crypto map MAINMAP 10 ipsec-isakmp 
 set peer 80.0.0.3
@@ -133,7 +133,7 @@ exit
 crypto isakmp key cisco2 address 80.0.0.3
 crypto ipsec transform-set MYTS esp-aes esp-sha-hmac 
 ip access-list extended VPNLIST
-permit ip 172.16.1.0 0.0.0.255 10.0.0.0 0.255.255.255
+permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
 exit
 crypto map MAINMAP 10 ipsec-isakmp 
 set peer 80.0.0.3
@@ -224,8 +224,8 @@ exit
 #ip nat inside source list 100 interface GigabitEthernet0/1 overload 
 
 # VPN
-access-list 100 deny ip 10.1.1.0 0.0.0.255 172.16.1.0 0.0.0.255
-access-list 100 permit ip 10.1.1.0 0.0.0.255 any
+access-list 100 deny ip 10.10.10.0 0.0.0.255 172.16.1.0 0.0.0.255
+access-list 100 permit ip 10.10.10.0 0.0.0.255 any
 license boot module c1900 technology-package securityk9 
 
 # VPN principal
@@ -239,7 +239,7 @@ exit
 crypto isakmp key cisco1 address 80.0.0.1
 crypto ipsec transform-set MYTS esp-aes esp-sha-hmac 
 ip access-list extended VPNLIST
-permit ip 172.16.1.0 0.0.0.255 10.0.0.0 0.255.255.255
+permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
 exit
 crypto map MAINMAP 10 ipsec-isakmp 
 set peer 80.0.0.1
@@ -257,7 +257,7 @@ exit
 crypto isakmp key cisco1 address 80.0.0.2
 crypto ipsec transform-set MYTS esp-aes esp-sha-hmac 
 ip access-list extended VPNLIST
-permit ip 172.16.1.0 0.0.0.255 10.0.0.0 0.255.255.255
+permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
 exit
 crypto map MAINMAP 10 ipsec-isakmp 
 set peer 80.0.0.2
