@@ -29,14 +29,19 @@ exit
 int GigabitEthernet0/0
 description LAN
 ip address 172.16.1.252 255.255.255.0
+ip nat inside
 no shutdown
 exit
 
 int GigabitEthernet0/1
 description WAN
 ip address 80.0.0.1 255.255.255.0
+ip nat outside
 no shutdown
 exit
+
+access-list 100 permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
+ip nat inside source list 100 interface GigabitEthernet0/1 overload 
 
 default-router 172.16.1.252
 exit
@@ -66,14 +71,19 @@ exit
 int GigabitEthernet0/0
 description LAN
 ip address 172.16.1.253 255.255.255.0
+ip nat inside
 no shutdown
 exit
 
 int GigabitEthernet0/1
 description WAN
 ip address 80.0.0.2 255.255.255.0
+ip nat outside
 no shutdown
 exit
+
+access-list 100 permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
+ip nat inside source list 100 interface GigabitEthernet0/1 overload
 
 exit
 wr
@@ -140,14 +150,19 @@ exit
 int GigabitEthernet0/0
 description LAN
 ip address 10.10.10.254 255.255.255.0
+ip nat inside
 no shutdown
 exit
 
 int GigabitEthernet0/1
 description WAN
 ip address 80.0.0.3 255.255.255.0
+ip nat outside
 no shutdown
 exit
+
+access-list 100 permit ip 10.10.10.0 0.0.0.255 172.16.1.0 0.0.0.255
+ip nat inside source list 100 interface GigabitEthernet0/1 overload
 
 ip route 172.16.1.0 255.255.255.0 80.0.0.1
 #ip dhcp excluded-address 10.10.10.201 10.10.10.255
