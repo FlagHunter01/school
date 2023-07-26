@@ -186,7 +186,7 @@ wr
 
 ### RA
 
-!!! warning "DHCP en suspens pour l'instant"
+!!! fail "Pas de DHCP pour l'instant"
 
 ```sh
 en
