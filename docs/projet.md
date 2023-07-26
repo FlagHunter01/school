@@ -119,7 +119,7 @@ exit
 #ip nat inside source list 100 interface GigabitEthernet0/1 overload 
 
 # VPN
-access-list 100 deny ip 172.16.1.0 0.0.0.255 10.1.1.0 0.0.0.255
+access-list 100 deny ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
 access-list 100 permit ip 172.16.1.0 0.0.0.255 any
 license boot module c1900 technology-package securityk9 
 
