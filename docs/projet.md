@@ -60,7 +60,7 @@ lifetime 14400
 authentication pre-share
 group 5
 exit
-crypto isakmp key cisco address 80.0.0.3
+crypto isakmp key cisco1 address 80.0.0.3
 crypto ipsec transform-set MYTS esp-aes esp-sha-hmac 
 ip access-list extended VPNLIST
 permit ip 172.16.1.0 0.0.0.255 10.0.0.0 0.255.255.255
@@ -127,7 +127,7 @@ lifetime 14400
 authentication pre-share
 group 5
 exit
-crypto isakmp key cisco address 80.0.0.3
+crypto isakmp key cisco2 address 80.0.0.3
 crypto ipsec transform-set MYTS esp-aes esp-sha-hmac 
 ip access-list extended VPNLIST
 permit ip 172.16.1.0 0.0.0.255 10.0.0.0 0.255.255.255
@@ -213,15 +213,32 @@ ip nat outside
 no shutdown
 exit
 
-access-list 100 permit ip 10.10.10.0 0.0.0.255 172.16.1.0 0.0.0.255
-ip nat inside source list 100 interface GigabitEthernet0/1 overload
+# Version sans VPN
+#access-list 100 permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
+#ip nat inside source list 100 interface GigabitEthernet0/1 overload 
 
-ip route 172.16.1.0 255.255.255.0 80.0.0.1
-#ip dhcp excluded-address 10.10.10.201 10.10.10.255
-#ip dhcp pool distant
-#network 10.10.10.0 255.255.255.0
-#default-router 10.10.10.254
-#exit
+# VPN
+access-list 100 deny ip 10.1.1.0 0.0.0.255 172.16.1.0 0.0.0.255
+access-list 100 permit ip 10.1.1.0 0.0.0.255 any
+license boot module c1900 technology-package securityk9 
+
+crypto isakmp policy 10
+encryption aes
+hash sha
+lifetime 14400
+authentication pre-share
+group 5
+exit
+crypto isakmp key cisco1 address 80.0.0.1
+crypto ipsec transform-set MYTS esp-aes esp-sha-hmac 
+ip access-list extended VPNLIST
+permit ip 172.16.1.0 0.0.0.255 10.0.0.0 0.255.255.255
+exit
+crypto map MAINMAP 10 ipsec-isakmp 
+set peer 80.0.0.1
+match address VPNLIST
+set transform-set MYTS
+exit
 exit
 wr
 ```
