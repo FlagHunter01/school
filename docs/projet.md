@@ -222,6 +222,7 @@ access-list 100 deny ip 10.1.1.0 0.0.0.255 172.16.1.0 0.0.0.255
 access-list 100 permit ip 10.1.1.0 0.0.0.255 any
 license boot module c1900 technology-package securityk9 
 
+# VPN principal
 crypto isakmp policy 10
 encryption aes
 hash sha
@@ -236,6 +237,24 @@ permit ip 172.16.1.0 0.0.0.255 10.0.0.0 0.255.255.255
 exit
 crypto map MAINMAP 10 ipsec-isakmp 
 set peer 80.0.0.1
+match address VPNLIST
+set transform-set MYTS
+
+# VPN secondaire
+crypto isakmp policy 9
+encryption aes
+hash sha
+lifetime 14400
+authentication pre-share
+group 5
+exit
+crypto isakmp key cisco1 address 80.0.0.2
+crypto ipsec transform-set MYTS esp-aes esp-sha-hmac 
+ip access-list extended VPNLIST
+permit ip 172.16.1.0 0.0.0.255 10.0.0.0 0.255.255.255
+exit
+crypto map MAINMAP 10 ipsec-isakmp 
+set peer 80.0.0.2
 match address VPNLIST
 set transform-set MYTS
 exit
