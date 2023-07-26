@@ -254,7 +254,7 @@ lifetime 14400
 authentication pre-share
 group 5
 exit
-crypto isakmp key cisco1 address 80.0.0.2
+crypto isakmp key cisco2 address 80.0.0.2
 crypto ipsec transform-set MYTS esp-aes esp-sha-hmac 
 ip access-list extended VPNLIST
 permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
