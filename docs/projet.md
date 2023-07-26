@@ -257,7 +257,7 @@ exit
 crypto isakmp key cisco2 address 80.0.0.2
 crypto ipsec transform-set MYTS esp-aes esp-sha-hmac 
 ip access-list extended VPNLIST
-permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
+permit ip 10.10.10.0 0.0.0.255 172.16.1.0 0.0.0.255
 exit
 crypto map MAINMAP 10 ipsec-isakmp 
 set peer 80.0.0.2
