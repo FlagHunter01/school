@@ -70,6 +70,9 @@ set peer 80.0.0.3
 match address VPNLIST
 set transform-set MYTS
 exit
+int GigabitEthernet0/1
+crypto map MAINMAP
+exit
 exit
 wr
 ```
@@ -136,6 +139,9 @@ crypto map MAINMAP 10 ipsec-isakmp
 set peer 80.0.0.3
 match address VPNLIST
 set transform-set MYTS
+exit
+int GigabitEthernet0/1
+crypto map MAINMAP
 exit
 exit
 wr
@@ -257,6 +263,9 @@ crypto map MAINMAP 10 ipsec-isakmp
 set peer 80.0.0.2
 match address VPNLIST
 set transform-set MYTS
+exit
+int GigabitEthernet0/1
+crypto map MAINMAP
 exit
 exit
 wr
