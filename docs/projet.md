@@ -56,10 +56,6 @@ glbp 1 priority 140
 glbp 1 preempt
 exit
 
-# Version sans VPN
-#access-list 100 permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
-#ip nat inside source list 100 interface GigabitEthernet0/1 overload 
-
 # VPN
 access-list 100 deny ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
 access-list 100 permit ip 172.16.1.0 0.0.0.255 any
@@ -134,11 +130,7 @@ ip address 172.16.1.253 255.255.255.0
 ip nat inside
 ip virtual-reassembly in
 glbp 1 ip 172.16.1.254
-exit
-
-# Version sans VPN
-#access-list 100 permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
-#ip nat inside source list 100 interface GigabitEthernet0/1 overload 
+exit 
 
 # VPN
 access-list 100 deny ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
@@ -253,10 +245,6 @@ ip address 10.10.10.254 255.255.255.0
 ip nat inside
 ip virtual-reassembly in
 exit
-
-# Version sans VPN
-#access-list 100 permit ip 172.16.1.0 0.0.0.255 10.10.10.0 0.0.0.255
-#ip nat inside source list 100 interface GigabitEthernet0/1 overload 
 
 # VPN
 access-list 100 deny ip 10.10.10.0 0.0.0.255 172.16.1.0 0.0.0.255
