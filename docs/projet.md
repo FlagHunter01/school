@@ -13,7 +13,7 @@ description: C'EST NOTRE PROJET!
 en
 conf t
 
-# Conf usuelle
+# Conf usuele
 hostname R1
 no ip domain lookup
 enable secret OATE
@@ -42,6 +42,18 @@ description WAN
 ip address 80.0.0.1 255.255.255.0
 ip nat outside
 no shutdown
+exit
+
+# GLBP
+interface GigabitEthernet0/0.99
+description LAN
+encapsulation dot1Q 99
+ip address 172.16.1.252 255.255.255.0
+ip nat inside
+ip virtual-reassembly in
+glbp 1 ip 172.16.1.254
+glbp 1 priority 140
+glbp 1 preempt
 exit
 
 # Version sans VPN
@@ -83,7 +95,7 @@ wr
 en
 conf t
 
-# Conf usuelle
+# Conf usuele
 hostname R2
 no ip domain lookup
 enable secret OATE
@@ -112,6 +124,16 @@ description WAN
 ip address 80.0.0.2 255.255.255.0
 ip nat outside
 no shutdown
+exit
+
+#GLBP
+interface GigabitEthernet0/0.99
+description LAN
+encapsulation dot1Q 99
+ip address 172.16.1.253 255.255.255.0
+ip nat inside
+ip virtual-reassembly in
+glbp 1 ip 172.16.1.254
 exit
 
 # Version sans VPN
@@ -192,11 +214,13 @@ wr
 en
 conf t
 
+# Conf usuele
 hostname RA
 no ip domain lookup
 enable secret OATE
 banner motd #RA#
 
+# SSH
 ip domain name cisco.com
 crypto key generate rsa general-keys modulus 2048
 username Admin secret cisco
@@ -205,6 +229,7 @@ line vty 0 15
 transport input ssh
 exit
 
+# Interface LAN
 int GigabitEthernet0/0
 description LAN
 ip address 10.10.10.254 255.255.255.0
@@ -212,11 +237,21 @@ ip nat inside
 no shutdown
 exit
 
+# Interface WAN
 int GigabitEthernet0/1
 description WAN
 ip address 80.0.0.3 255.255.255.0
 ip nat outside
 no shutdown
+exit
+
+# GLBP
+interface GigabitEthernet0/1.99
+description LAN
+encapsulation dot1Q 99
+ip address 10.10.10.254 255.255.255.0
+ip nat inside
+ip virtual-reassembly in
 exit
 
 # Version sans VPN
