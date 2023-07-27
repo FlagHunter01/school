@@ -186,7 +186,7 @@ wr
 
 ### RA
 
-!!! fail "Pas de DHCP pour l'instant"
+!!! failure "Pas de DHCP pour l'instant"
 
 ```sh
 en
@@ -273,4 +273,4 @@ wr
 
 ### SA
 
-!!! fail "Rien pour l'instant"
+!!! info "Rien pour l'instant"
