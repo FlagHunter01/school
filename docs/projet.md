@@ -348,7 +348,7 @@ snmp-server community prtg ro
 
 ## Configs finales brutes
 
-```title="S1"
+```title="R1"
 !
 version 15.4
 service timestamps debug datetime msec
@@ -530,7 +530,7 @@ scheduler allocate 20000 1000
 end
 ```
 
-```title="S2
+```title="R2"
 !
 version 15.4
 service timestamps debug datetime msec
