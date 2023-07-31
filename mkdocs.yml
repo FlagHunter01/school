@@ -63,7 +63,6 @@ nav:
         - Maths: uni/maths.md
         - Sécurité: uni/securite.md
     - Misc: misc.md
-    - NOTRE PROJET: projet.md
 
 
 theme:
