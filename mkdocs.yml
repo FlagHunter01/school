@@ -20,6 +20,21 @@ edit_uri: edit/main/docs/
 nav:
     - Accueil: index.md
     - Université: 
+      - uni/index.md
+      - Management de la cyber: uni/management/index.md
+      - Audit cyber: uni/audit/index.md
+      - Sécurité des infrastructures: uni/infra/index.md
+      - Security by design: uni/design/index.md
+      - Détection et réaction: uni/detection/index.md
+      - Nouvelles technologies de la cyber: uni/tech/index.md
+    - CFA:
+      - cfa/index.md
+      - Cyberops: cfa/cyberops/index.md
+      - Anglais: cfa/anglais/index.md
+      - Sécurité: cfa/secu/index.md
+      - Cannaux auxiliaires: cfa/cannaux/index.md
+      - Crypro: cfa/crypto/index.md
+      - Forensic CNPP: cfa/forensic/index.md
     - M1: 
       - m1/m1.md
       - CFA:
