@@ -151,3 +151,17 @@ Les contrôles sont tous les processus de sécurité, comme le MFA par exemple.
 ## DLP - Data Leakage Protection
 
 !!! failure "J'ai daydream"
+
+## Menace Avancée Persistante (APT)
+
+Avancées
+
+Les attaquants qui utilisent toute la gamme des capacités d'intrusion informatique, depuis les simples attaques accessibles au grand public jusqu'a la mise au point d'outils personnalisés, adaptés au niveau de sécurité de leur cible.
+
+Persistant
+
+Ils sont officiellement chargés d'accomplir une mission er s'en acquittent jusqu'a ce qu'elle soit couronnée de succès. Ils maintiennent le niveau d'accès et de contrôle nécessaire à l'accomplissement de leur mission. 
+
+Menace
+
+Contrairement aux botnets, aux enregistreurs de frappe ou aux vers, l'APT est un adversaire humain - des personnes qui int pour mission d'obtenir des informations spécifiques ou d'acceder aux systemes et aux donnees du réseau de leur cible.
