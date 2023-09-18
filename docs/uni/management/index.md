@@ -138,3 +138,4 @@ Assurer qu'une partie d'une transaction ne peut nier avoir recu une transaction 
 - Erreurs et omissions
 - Fraudes et vols
 - Attaquants malveillants, cométiteurs, activistes, hackers
+
