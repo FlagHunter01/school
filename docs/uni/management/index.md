@@ -6,7 +6,9 @@ description: Cours de management de la cybersécurité
 !!! info "Prof"
     Pascal Antonini
 
-## Notions
+## Introduction
+
+### Notions
 
 !!! abstract "Cybersécurité"
     Englobe l'ensemble des autres définitions.
@@ -37,21 +39,21 @@ description: Cours de management de la cybersécurité
 !!! abstract "Disponibilité"
     L'information estt disponible quand nécessaire.
 
-## Types de données
+### Types de données
 
 - Finance
 - RH
 - Opérations
 - Propriété intellectuelle
 
-## Sécurité vs privacy
+### Sécurité vs privacy
 
 === "Sécurité"
     Confidentialité, Intégrité, Disponibilité de toutes les données sensibles et critiques.
 === "Privacy"
     Respect de la vie privée, données à caractère personnel (RGPD).
 
-## Sécurité des Systèmes d'Information
+### Sécurité des Systèmes d'Information
 
 La **SSI** ou cybersécurité consiste a protéger l'information et les systèmes d'information contre les actions non-autorisées suivantes:
 
@@ -63,7 +65,7 @@ La **SSI** ou cybersécurité consiste a protéger l'information et les système
 - enregistrement
 - destruction
 
-## Cybersécurité
+### Cybersécurité
 
 La cyber n'adresse pas seulement la technique.
 
@@ -73,7 +75,7 @@ Elle touche les informations qui circules sur les réseaux, les systèmes d'expl
 
 Les fondamentaux de la sécurité concernent la protection de ses actifs.
 
-## Sécu de l'info et sécu info
+### Sécu de l'info et sécu info
 
 La sécurité de l'information nécessite une approche globale qui addresse différents domaines des technologies de l'onformation et de la communication (TIC) et hors des TIC
 
@@ -85,7 +87,7 @@ Un programme de sécurité de l'information doit toucher chaque étape du cycle 
 
 Tous ses éléments s'organisent selon le tryptique: Humains, Processus et Technologies
 
-## Caractéristiques d'un programme de sécurité  de l'information
+### Caractéristiques d'un programme de sécurité  de l'information
 
 L'accès aux informations est réalisé de manière dynamique et reflète les processus orgaisationnels de l'entreprise, sa structure et sa culture. 
 
@@ -97,49 +99,49 @@ Les ressources nécessaires pour assurer la portection des informations dans le 
 - Une compréhension des risques et des menaces est fondamentale pour permettre la prise de décisions managériales
 - La sécurité peut être coûteuse. De ombien avons-nous besoin et où devons-nous projeter nos ressources pour protéger notre activité?
 
-## Principes de sécurité
+### Principes de sécurité
 
 Au-delà des grands objectifs de sécurité que nous avons intoduits: confidentialité, intégralité et disponibilité, les grands principes suivants sont également a concidérer.
 
-### Séparation des tâches
+#### Séparation des tâches
 
 Séparer les responsabilités en terme de traitement ou d'information afin qu'aucun individu agissant seul ne puisse compromettre la sécurité.
 
-### Moindre privilège
+#### Moindre privilège
 
 Chaque personne n'a accès qu'aux traitements ou données qui lui sont strictement nécessaires dans l'exercice de sa fonction. L'application de ce principe permet de limiter les dommages qui pourraient résulter d'un accident, d'une erreur ou d'une utilidation non autorisée d'un système d'information.
 
-### Besoin d'en connaitre
+#### Besoin d'en connaitre
 
 Le besoin légitime d'une personne ou d'une organisation de connaitre, accéder ou posséder une information spécifique qui est critique pour permettre la réalisation d'une mission qui lui est confiée.
 
-## Définitions
+### Définitions
 
-### Respect de la vie privée
+#### Respect de la vie privée
 
 Le respect de la vie privée / protection des données a caractere personnel est d"fini comme les droits et obligations des individus et des organisations qui s'appliquent a la collecte, l'utilisation, la rétention et la divulgation de données a caractere personnel (AICPA Generally Accepted Privacy Principles)
 
-### Confidentialité
+#### Confidentialité
 
 !!! failure "RIP il a changé de slide"
 
 <hr>
 
-### Authenticité
+#### Authenticité
 
 Les données, transactions, communications et documents sont authentiques
 
-### Non-répudiation
+#### Non-répudiation
 
 Assurer qu'une partie d'une transaction ne peut nier avoir recu une transaction et que la contrepartie ne peut nier l'avoir émise.
 
-## Menaces des SI
+### Menaces des SI
 
 - Erreurs et omissions
 - Fraudes et vols
 - Attaquants malveillants, cométiteurs, activistes, hackers
 
-## Définir les contrôles pour protéger les actifs
+### Définir les contrôles pour protéger les actifs
 
 !!! abstract "Risque"
     Probabilité d'une menace exploitant une vulnérabilité et son impact métier correspondant.
@@ -148,11 +150,11 @@ Le risque est compris comme la probabilité d'une menace exploitant une vulnéra
 
 Les contrôles sont tous les processus de sécurité, comme le MFA par exemple.
 
-## DLP - Data Leakage Protection
+### DLP - Data Leakage Protection
 
 !!! failure "J'ai daydream"
 
-## Menace Avancée Persistante (APT)
+### Menace Avancée Persistante (APT)
 
 Avancées
 
@@ -165,3 +167,11 @@ Ils sont officiellement chargés d'accomplir une mission er s'en acquittent jusq
 Menace
 
 Contrairement aux botnets, aux enregistreurs de frappe ou aux vers, l'APT est un adversaire humain - des personnes qui int pour mission d'obtenir des informations spécifiques ou d'acceder aux systemes et aux donnees du réseau de leur cible.
+
+## 2 - 
+
+### Sécurité de l'information
+
+La sécurité de l'information désigne les moyens de proteger les informations et les systemes d'information contre l'acces, l'utilisation, la divulgation, la distribution, la modificacion, la consultation, l'inspection, l'enregistrement ou la destruction non autorisés.
+
+Mesures de controle d'ordre administratif, technique et physique fonctionnant ensemble pour proteger les actifs d'information de l'entreprise et l'infrastructure du support. 
