@@ -139,3 +139,15 @@ Assurer qu'une partie d'une transaction ne peut nier avoir recu une transaction 
 - Fraudes et vols
 - Attaquants malveillants, cométiteurs, activistes, hackers
 
+## Définir les contrôles pour protéger les actifs
+
+!!! abstract "Risque"
+    Probabilité d'une menace exploitant une vulnérabilité et son impact métier correspondant.
+
+Le risque est compris comme la probabilité d'une menace exploitant une vulnérabilité, ciblant des actifs et l'impact de sa réalisation sur l'activité
+
+Les contrôles sont tous les processus de sécurité, comme le MFA par exemple.
+
+## DLP - Data Leakage Protection
+
+!!! failure "J'ai daydream"
