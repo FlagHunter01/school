@@ -6,7 +6,7 @@ description: Cours de management de la cybersécurité
 !!! info "Prof"
     Pascal Antonini
 
-## Introduction
+## 1 - Introduction
 
 ### Notions
 
@@ -89,7 +89,7 @@ Tous ses éléments s'organisent selon le tryptique: Humains, Processus et Techn
 
 ### Caractéristiques d'un programme de sécurité  de l'information
 
-L'accès aux informations est réalisé de manière dynamique et reflète les processus orgaisationnels de l'entreprise, sa structure et sa culture. 
+L'accès aux informations est réalisé de manière dynamique et reflète les processus orgaisationnels de l'entreprise, sa structure et sa culture.
 
 Les risques et les besoins de sécurité changent en permanence.
 
@@ -162,16 +162,113 @@ Les attaquants qui utilisent toute la gamme des capacités d'intrusion informati
 
 Persistant
 
-Ils sont officiellement chargés d'accomplir une mission er s'en acquittent jusqu'a ce qu'elle soit couronnée de succès. Ils maintiennent le niveau d'accès et de contrôle nécessaire à l'accomplissement de leur mission. 
+Ils sont officiellement chargés d'accomplir une mission er s'en acquittent jusqu'a ce qu'elle soit couronnée de succès. Ils maintiennent le niveau d'accès et de contrôle nécessaire à l'accomplissement de leur mission.
 
 Menace
 
 Contrairement aux botnets, aux enregistreurs de frappe ou aux vers, l'APT est un adversaire humain - des personnes qui int pour mission d'obtenir des informations spécifiques ou d'acceder aux systemes et aux donnees du réseau de leur cible.
 
-## 2 - 
+## 2 -
 
 ### Sécurité de l'information
 
 La sécurité de l'information désigne les moyens de proteger les informations et les systemes d'information contre l'acces, l'utilisation, la divulgation, la distribution, la modificacion, la consultation, l'inspection, l'enregistrement ou la destruction non autorisés.
 
-Mesures de controle d'ordre administratif, technique et physique fonctionnant ensemble pour proteger les actifs d'information de l'entreprise et l'infrastructure du support. 
+Mesures de controle d'ordre administratif, technique et physique fonctionnant ensemble pour proteger les actifs d'information de l'entreprise et l'infrastructure du support.
+
+### Composants fonctionnels de la SI
+
+- Sécurité physique
+  - contrôles environnementaux
+  - controles d'acces, evacuations
+  - surveillance
+  - sécurité du personnel
+- Controles des actifs
+  - gestion des actifsestion des materiels
+  - gestion des logiciels
+  - achats
+  - classification de l'information
+- Sécurité opérationnelle
+  - Protection des données
+  - reponse a incident
+  - gestion des vulnerabilites
+  - securite des infrastructures
+  - gestion des identites et des acces
+- Management de la securite de l'information
+  - organisation de la securite
+  - formation et sensibilisation
+  - politiques et standards
+  - suivi des metriques et reporting
+  - management des risques et conformite
+  - plan de continuite
+
+### Composants de la sécurité de l'information
+
+- Management de la sécurité de l'information
+  - L'équipe de gouvernance sécurité d'une organisation etablit la dtrategie et les besoins de la securite de l'information au travers du developpement des politiques, standards et cadres de ka securite d'information
+- Exploitaion de la securite (Secops)
+  - Les pratiques quotidiennes et les controles mis en oeuvre sur le personnel et les systemes qui garantissent l'execution
+
+### Composants de la sécu
+
+- Gestion des actifs
+  - Ensemble de pratiques qui soutiennent la gestion du cycle de vie de l'information: quelle information, ou, de ka creation a la supression
+- Sécurite physique
+  - Ensemble de pratiques et de mesures operationnelles visant a prevenir et a decourager l'acces non autorise aux installations et aux infrastructures critiques de l'entreprise
+- ingenierie securite
+  - Domaine de l'ingenieurie qui se concentre sur les caracteristiques de conception de la securite dans les systemes afin qu'ils puissent gerer de maniere adequate les eventuelles perturbations dues a des problemes techniques, a des cagtastrophes naturelles ou a des activites malveillantes
+
+### Organisation de la securite
+
+Aligner la securite de l'information sur la strategie de l'entreprise pour atteindre les objectifs de l'organisation
+
+Gerer et attenuer les risques et les impacts potentiels sur les ressources d'information a un niveau acceptable
+
+Informer et eduquer l'organisation sur les menaces qui pesent sur la securite de l'information et promouvoir un comportement conscient des risques
+
+Mesurer, controler et communiquer des mesures et des indicateurs de performance significatifs en matiere de secirite de l'information
+
+optimiser les investissements en matiere de securite de l'information pour soutenir les objectifs de l'organisation
+
+### Gestion des risques et conformité
+
+- Risques: identification, analyse et traitement des risques lies a la securite de l'information susceptibles de nuire a l'organisation en tenant compte de l'impact prevu et de la probabilite d'occurence
+  - gestion des menaces et des vulnerabilite
+  - surveillance des reseaux et systemes
+  - tests des applications
+  - reprise apres sinistre
+  - gestion des risques lies aux fournisseurs
+- Conformite: moyens de se conformer aux exigences internes ainsi qu'aux lois et reglements et aux normes sectorielles
+  - Mise en oeuvre de controles a l'appui de la politique et des normes
+  - Audit
+  - reponse aux incidents
+  - evaluation des risques
+
+### Formation et sensibilisation
+
+la sécurité de l'iformation est au niveau du maillon le plus faible du processus.
+
+La formation permet d'approfindir les connaissances sur un sujet ou un ensemble de sujets.
+
+Elle se concentre sur le personnes, la culture et le comportement.
+
+Les activités de sensibilisation sont concues pour promouvoir les connaissances en matiere de securite de l'information aupres de tous les membres du personnel.
+
+!!! failure "Il manque un bout parce que je suis parti à l'administration"
+
+### Sécurité operationnelle
+
+Les taches quotidiennes de la gestion des risques lies a la securite de l'information au traavers:
+
+- la mise en place de controles necessaires definis dans les politiques et les standards (centres d'operations de securite ou SOC)
+- Verification de 'efficacite permanente des controles par des tests, la surveillance et les audits
+- Realisation d'evaluations permanantes en tenant compte des objecrtifs de k'entreprise et du profil de risque de l'organisation
+- Le suivi d'indicateurs de risques et de performances
+
+#### Principales fonctions$
+
+- Protection de l'information
+- Reponse a incident
+- Gestion des vulnerabilites
+- Securite de l'infrastructre
+- Gestion des identites et des acces
