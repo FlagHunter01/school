@@ -58,7 +58,7 @@ Description des activités et des dispositions nécessaires pour réaliser un au
 
 !!! failure "Manque un bout ici"
 
-## Etapes
+### Etapes
 
 - Déclanchement de l'audit
 - Préparation des activités sur site
@@ -67,7 +67,7 @@ Description des activités et des dispositions nécessaires pour réaliser un au
 - Clôture
 - Suivi
 
-### Déclanchement d'audit
+#### Déclanchement d'audit
 
 - Nomination du responsable de 'léquipe d'audit
 - Définition des objectifs, du champs et des critères
@@ -75,7 +75,7 @@ Description des activités et des dispositions nécessaires pour réaliser un au
 - Constitution de l'équipe
 - Contact initial avec l'audité
 
-### Préparation des activités sur site
+#### Préparation des activités sur site
 
 Réalisation d'une revue de docue,nts dans la préparation de l'audit.
 
@@ -87,7 +87,7 @@ Permet de:
 - Remonter toute problématique liée à la documentation
 - Décider si le processus d'audit continue ou s'i doit être reporté
 
-### préparation du plan d'audit
+#### préparation du plan d'audit
 
 Description des activités et des dispositions nécessaires pour réaliser un audit.
 
@@ -123,7 +123,7 @@ Préparation des documents de travail
   - Preuve de planification
 - Formulaires utilisés pour enregistrer les observations et preuves
 
-### Intervention sur site
+#### Intervention sur site
 
 Attribution des rôles et responsabilités des guides et des observateurs
 
