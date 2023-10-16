@@ -103,9 +103,70 @@ Les étapes fondamentales sont:
 - Evaluer la vraisemblance
 - Evaluer les nivbeaux de risques
 
-EBIOS RM: Expression des besoins et identification des objectifs de sécurité. 
-outil complet de gestion des risques SSI conforme au RGS et aux normes ISO27001 et 27005. 
+EBIOS RM: Expression des besoins et identification des objectifs de sécurité.
+outil complet de gestion des risques SSI conforme au RGS et aux normes ISO27001 et 27005.
 Elaboration par l'ANSSI et le Club EBIOS.
 
 !!! abstract "Risque"
     Scénario qui combine un évènement redouté et un ou plusieurs scénarios de menaces. On estime son niveau par sa gravité (hauteur des impacts) et sa vraisemblance (possibilité qu'il se réalise).
+
+!!! abstract "Identification du projet"
+    Contexte, parties prenantes, enjeux métier, volume, dates clés, informations disponibles sur le projet informatique et ses composants, solutions, architecture
+
+!!! abstract "Evaluation des besoins de sécurité"
+    !!! warning "A compléter"
+
+!!! abstract "Analyse des risques"
+    !!! warning "A compléter"
+
+!!! abstract "Traitement des risques
+    !!! warning "A compléter"
+
+!!! abstract "Plan d'actions de sécurité"
+    !!! warning "A compléter"
+
+##### ISP
+
+- Identification: identification précoce des risques de cyber, des projets critiques et des mesures de sécurité indispensables
+- Conformité: Garantir la conformité du système d'information vis-a-vis de la reglementation applicable et de la politique de sécurité interne
+- Anticipation: anticiper les menaces et éviter les incidents de sécurité
+- Business: couvrir les besoins de sécurité du métier
+
+##### Détecter les projets
+
+- Se faire connaitre: expliquer la démarche d'analyse de risques et les bénéfices attendus pour l'organisation
+- Capter les projets:
+    - Portefeuille projets
+    - Connaitre les métiers (être présent dans les CoDir)
+    - Traquer le shadow IT (les utilisateurs qui changent des choses sans passer par l'IT (outils louches, applications, automatisations via webapp ...))
+    - Se positionner sur les outils (ITSM, méthodes projet, comités)
+
+##### Contexte
+
+Pour analyser les risques inhérents à un projet
+
+##### Besoins de sécurité
+
+- Disponibilité: Propriété d'être accessible et utilisable à la demande par une entité autorisée
+- Intégrité: Propriété de protection de l'exactitude et de l'exhaustivité de l'information
+- Confidentialité: Propriété selon laquelle l'information n'est pas rendue accessible ou divulguée à des personnes, entités ou processus non autorisés
+- Tracabilité: Besoin de pouvoir retrouver le cheminement de l'information tout au long de la chaîne de traitement et de transmission, avec une garantie de fiabilité donnant à ces traces une valeur de preuve
+
+Il faut qualifier les conséquences, les impacts de la perte de l'un de ses critères. 
+
+Vérifier l'implication de conformité (RGPD, RGS, PCI-DSS-DORA ...) 
+
+##### Mesure des critères de sécurité
+
+- Disponibilité: se mesure en fonction de la Durée d'Indisponibilité Maximale Admissible (DIMA)
+- Intégrité: Se mesure en termes de capacité à détecter une modification et à la réparer
+- Confidentialité: Se mesure en termes de diffusion acceptable de l'information
+- Preuve: se mesure en termes de besoin d'imputabilité
+
+## Ateliers analyse de risques
+
+1. Cadrage / socle de sécurité
+2. Sources de risque (carthographie)
+3. Scénarios stratégiques (définition des chemins d'attaque d'après les sources de risques)
+4. Scénarios opérationnels (détail de ce qui est faillible sur les sytèmes)
+5. Traitement du risque
