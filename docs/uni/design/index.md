@@ -55,3 +55,57 @@ Elle est anticipée.
 - Architecture (ANSII)
 - Projets (implémentation d'une nouvelle fonctionnalité) (EBIOS RM, ISP)
 - Stratégies (ISO27001, NIST)
+
+#### Le code
+
+Eviter de générer des applis faillibles dès le départ.
+Il faut considérer au plus tôt les aspects relatifs à la sécurité pour anticiper au maximum l'introduction de vulnérabilités.
+
+##### DevSecOps
+
+Intégration de la sécurité des applications plus tôt dans le cycle de développement.
+Anticiper pour éviter la correction de vulnérabilités a posteriori, alors plus couteuse et plus compliquée.
+
+##### OWAPS
+
+Open WorldWide Applicatoon Security Project.
+
+Travaille sur un guide pour les développeurs, mais également beaucoip de ressources. Les principes le plus souvent appliqués sont:
+
+- Le moindre privilège
+- La séparation des tâches
+- La défense en profondeur
+- Le principe de Zero Trust
+
+#### Architecture
+
+L'objectif est de protéger au mieux les systèmes critiques et les données sensibles d'une organisation, grâce à des principes d'architectures sécurisées.
+
+Cela permet:
+
+- d'éviter la propagation d'attaques
+- de conserver un bon niveau de sécurité malgré les migrations
+- de concevoir des architectures permettant de satisfaire les besoins de sécurité
+
+#### Projets
+
+L'activité principale réside dans l'analyse de risques.
+
+Des méthodes existent, comme EBIOS RM, ou des normes comme ISO27005, mais on peut également construire sa propre méthode.
+
+Les étapes fondamentales sont:
+
+- Identifier les actifs
+- Identifier le personnes responsables
+- Identifier les vulnérabilités
+- Identifier les menaces
+- Identifier les impacts
+- Evaluer la vraisemblance
+- Evaluer les nivbeaux de risques
+
+EBIOS RM: Expression des besoins et identification des objectifs de sécurité. 
+outil complet de gestion des risques SSI conforme au RGS et aux normes ISO27001 et 27005. 
+Elaboration par l'ANSSI et le Club EBIOS.
+
+!!! abstract "Risque"
+    Scénario qui combine un évènement redouté et un ou plusieurs scénarios de menaces. On estime son niveau par sa gravité (hauteur des impacts) et sa vraisemblance (possibilité qu'il se réalise).
