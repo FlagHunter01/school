@@ -309,4 +309,135 @@ Obligations:
 - Politiques internes, déontologie
 - Bonnes pratiques et normes mises en oeuvre de manière volontaire
 
+##### Détermination du domaine d'application du SMSI
+
+Amélioration de la cybersécurité -> meilleure couverture des risques -> différentiation sur le marché
+
+Analyse du système existant:
+
+- Onservation / questionnaire: comprendre le fonctionnement de l'organisme
+- Entretiens: Rencontrer des personnes de différentes identités
+- Documentation: Analyser la documentation des politiques, procédures, rapports etc
+- Revues techniques: utiliser des outils de type scanner de vulnérabilités techniques impactant l'actiivté de l'organisme
+
+##### Analyse du système existant
+
+Comprendre le système existant -> Identification des besoins d'amélioration -> Actions à intégrer dans le projet SMSI
+
+CCMI:
+
+- Inexistant
+- Initial
+- Géré
+- Défini
+- Géré quantitativement
+- Optimisé
+
+##### Engagement du management
+
+- Faisabilité:
+  - Cadrage du projet
+  - Bénéfices
+  - Principales étapes du calendrier
+  - Outil de communication
+- Equipe projet et ressources
+  - Sponsor (personne avec un pouvoir de décision important au sein de l'organisation)
+  - Comité de pilotage
+  - Chef de projet
+  - Equipe de projet
+  - Parties intéressées
+  - Estimation des budgets
+- Plan projet
+  - Charte projet
+  - Gestion de projet
+  - Contenu, livrables
+  - Répartition des travaux
+  - Etapes
+  - Risques potentiels
+- Validation du management
+  - Approbation de l'étude
+  - Approbation du plan de projet
+
+##### Pérmiètre du SMSI
+
+- Périmètre organisationnel
+  - Processus
+  - Entité organisationnelle (département, service, direction)
+  - Organisme
+  - Ecosystème
+- Limites de sécurité
+  - Processus
+  - Données
+  - Applications
+  - Infrastructures (réseaux, systèmes)
+- Limites physiques
+  - Siège
+  - Usines
+  - Locaux décentralisés
+- Périmètre du SMSI
+  - Organisme 
+  - Processus organisationnels
+  - Rôles et responsabilités
+  - Actifs et SI
+  - Sites
+
+##### Politique de sécurité
+
+- Rédaction de la politique générale de sécurité
+  - Définition du contenu
+  - Rédaction
+- Validation par la direction
+  - Engagement de la direction
+  - Approbation formelle
+- Publication de la politique
+  - Sessions de communication
+  - Intranet
+  - kit d'acceuil des nouveaux employés
+- Sensibilisation
+  - Plan de formation
+  - Sessions de sensabilisation
+  - Test des connaissances
+- Contrôle de l'application et révision
+  - Contrôler l'application de la politique
+  - Réviser la politique en cas de besoin
+
+##### Gestion des risques
+
+- Identification des risques
+  - Actifs
+  - Processus métier
+  - Menaces
+  - Mesures de sécurité
+  - Vulnérabilités
+  - Impacts
+- Analyse des risques
+  - Choix d'une méthode
+  - Analyse des conséquences
+  - Matrice d'application des risques
+  - Estimation du niveau des risques
+- Evaluation des risques
+  - Evaluation des risques en comparaison des critères de risques
+  - Priorisation des risques
+- Traitement des risques
+  - Identifier les possibilités de traitement du risque
+  - Déterminer si le risque résiduel est acceptable
+  - transfert du risque
+- Acceptation des risques
+  - Approbation des risques par les propriétaires
+  - Gestion du risque résiduel
+- Suivi et revue
+  - S'rassurer que la mise à jour des risques est bien intégrée dans les processus de l'entreprise
+
+##### Concption et implémentation des mesures de sécurité
+
+- Définition des mesures et des processus
+  - Objectifs
+  - Activités
+  - Rôles
+  - Ressources
+  - Diagrammes, narratifs
+  - Qui, quoi, quand, où, comment
+- Rédaction des politiques et procédures
+  - Exemples: télétravail, appareils mobiles, gestion des tiers, développement sécurisé
+
 
