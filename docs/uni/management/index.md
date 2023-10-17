@@ -274,5 +274,39 @@ Les tâches quotidiennes de la gestion des risques liés à la sécurité de l'i
 - Sécurité de l'infrastructure
 - Gestion des identités et des acces
 
+#### Mise en place d'un SMSI
+
+- Définition d'un périmètre
+- Définition de la politique de sécurité
+- Obtention de l'engagement du management
+- Gestion des risques
+
+##### Compréhention de l'organisation et de son contexte
+
+La compréhention géénrale de l'entreprise/organisme vise à identifier les enjeux de cybersécurité qui la concerne (secteur d'activité, localisations, structure organisationnelle, concurrence etc):
+
+- Raison d'être: le SMSI doit petre alligné avec la raison d'être de l'entreprise en assurant la protection de ses actifs
+- Objectifs stratégiques: la gestion des risques SI doit être alignée avec les objectifs de l'entreprise
+- Culture: la culture de l'entreprise et les valeurs vont influencer les dispositifs de gestion des risques cyber à mettre en place
+- Stratégie: l'exécution de la stratégie influence directement les dispositifs de cybersécurité à mettre en place
+
+Compréhension des besoins et des attentes des parties intéressées:
+
+- Employés, DG, actionnaires, conseil d'administration
+- Clients
+- Régulateurs, législateurs, syndicats
+- Fournisseurs, partenaires, banques
+
+Obligations:
+
+- Contrats passés avec les parties intéressées
+- Lois et règlementations
+  - RGPD
+  - Cybercriminalité
+  - Signature électronique
+  - Paiement électronique
+  - Record management
+- Politiques internes, déontologie
+- Bonnes pratiques et normes mises en oeuvre de manière volontaire
 
 
