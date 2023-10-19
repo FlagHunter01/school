@@ -34,3 +34,23 @@ Réagir face à un **incident** en prenant en compte toutes les informations li�
 Logs DHCP stonks    
 
 pi-hole.net
+
+Train le personnel, répéter des simulations pour que ca reste frais
+
+## Contexte
+
+Qui nous attaque? 
+
+Il faut faire les vérifs, mais aussi vérifier si les vérifs ont bient été faites
+
+Le principe de base est l'automatisation!
+
+## Erreurs
+
+- Négliger le facteur humain
+- Tout miser sur la technique
+- Négliger la gouvernance
+- Mal définir ou évaluer le périmètre
+- Mal maîtriser son infrastructure
+- Détruire des indices (on commence par faire un snapshot avant de toucher)
+
