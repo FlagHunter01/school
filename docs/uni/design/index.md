@@ -170,3 +170,38 @@ Vérifier l'implication de conformité (RGPD, RGS, PCI-DSS-DORA ...)
 3. Scénarios stratégiques (définition des chemins d'attaque d'après les sources de risques)
 4. Scénarios opérationnels (détail de ce qui est faillible sur les sytèmes)
 5. Traitement du risque
+
+
+### Exercice
+
+Menace cible actif qui possède des vulnérabilités, et ceci a des conséquences
+
+#### Vulnérabilités
+
+##### Techniques
+
+- Vulnérabilités Java et Chrome
+- Leak des mdp des utilisateurs
+- Leak de la data de prod lors des tests
+- Manque d'infos sur le fonctionnement de la messagerie instantannée
+
+##### Organisationnelles
+
+- Manque d'infos sur la procédure d'auth
+- Manque d'infos sur le paramétrage des métier/profils dans Galaxie (déclaratif? Via demande?)
+- Manque d'infos sur les logs - pb lors du debug des incidents et / ou restauration
+
+
+#### Menaces
+
+##### Externes
+
+- Altération du contenu de l'application 
+- Connexion illégale au portail
+- Obtention de la data de prod
+- Spoof de la messagerie
+
+##### Internes
+
+- Erreur de manip qui leak les données de prod
+- Leak des mdp (post-it, texte en clairf etc)
