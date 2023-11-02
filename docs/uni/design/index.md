@@ -172,7 +172,7 @@ Vérifier l'implication de conformité (RGPD, RGS, PCI-DSS-DORA ...)
 5. Traitement du risque
 
 
-### Exercice
+### Exercice 1
 
 Menace cible actif qui possède des vulnérabilités, et ceci a des conséquences
 
@@ -205,3 +205,12 @@ Menace cible actif qui possède des vulnérabilités, et ceci a des conséquence
 
 - Erreur de manip qui leak les données de prod
 - Leak des mdp (post-it, texte en clairf etc)
+
+### Exercice 2
+
+- Utilise flash
+- It is possible to filter the IP address to restrain access to the application: users can then only
+log in from a set location.
+- 16
+Advanced Role: Manager sus a utiliser avec partimonie
+
