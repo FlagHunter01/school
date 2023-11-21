@@ -74,3 +74,5 @@ surveiller pki:
 - Fonction de la haute dispo
 - Controle des contraintes
 - Vérifier les stratégies d'émission
+
+Aurelien BORDES ?
