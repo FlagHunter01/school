@@ -41,8 +41,7 @@ nav:
         - Language C: m1/cfa/c/c.md
         - BDD: m1/cfa/bdd.md
         - Sécurité Linux: m1/cfa/secu.md
-    - Docker: docker.md
-#      - CCNA 1: cfa/ccna1.md
+#    - CCNA 1: cfa/ccna1.md
 #    - CCNA 2:
 #       - cfa/ccna2/index.md
 #       - 1 - Configuration de base des périphériques: cfa/ccna2/1.md
@@ -80,6 +79,7 @@ nav:
         - Sécurité: m1/uni/securite.md
     - Misc: misc.md
 #    - NOTRE PROJET: projet.md
+    - Docker: docker.md
 
 
 theme:
