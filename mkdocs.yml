@@ -1,11 +1,10 @@
-# Displayed title TODO: customize
+# Displayed title TODO: customize 
 site_name: School
 # General description
 site_description: Recueil de mes prises de notes liées aux cours dispensés au CFA et à l'université, ainsi que quelques exercices et d'autres médias.
 # Author of the site
 site_author: Tim FROLOV
 # Copyright notice in the footer
-#copyright: Copyright &copy; 2015 - 2023 Tim FROLOV
 # URL of the site
 site_url: https://flaghunter01.github.io/school
 # URL of the GitHub repo TODO: customize
@@ -230,10 +229,6 @@ markdown_extensions:
   - pymdownx.tilde
   # make admonitions colabseable
   - pymdownx.details
-  # Emoji support
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
   # Highlight code blocks
   - pymdownx.highlight:
       anchor_linenums: true

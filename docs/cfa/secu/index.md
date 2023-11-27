@@ -74,3 +74,21 @@ surveiller pki:
 - Fonction de la haute dispo
 - Controle des contraintes
 - Vérifier les stratégies d'émission
+
+Aurelien BORDES ?
+Petitpotam ?
+
+SID History doit être vide s'il n'y a pas un contrôleur de domaine approprié. 
+
+Délégation des rôles:
+
+- Data management
+    - Delegation des OU
+- Ressource management
+    - Serveurs
+        - OUs serveurs
+        - Admin serveurs
+- Services management
+    - AD
+
+
