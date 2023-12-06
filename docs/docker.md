@@ -13,7 +13,7 @@ En 2013, la société se renomme Docker et démocratise l'utilisation des conten
 
 ### Produits et services
 
-Docker est bien évidemment connue pour son produit homonyme, le conteneur le plus utilisé au monde. Celà-dit, l'entreprise propose d'autres produits et services qui sont é,numérés ci-dessous:
+Docker est bien évidemment connue pour son produit homonyme, le conteneur le plus utilisé au monde. Celà-dit, l'entreprise propose d'autres produits et services qui sont énumérés ci-dessous:
 
 - Docker Hub est une solution de création et de stockage de conteneurs (à l'image de GitHub avec le code). Il s'agit de l'évolution du service original de dotCloud, Inc. qui est aujourd'hui utilisée par des projets mondialement connus comme Python, Ubuntu, httpd, MySQL, Grafana etc.
 
