@@ -91,4 +91,13 @@ Délégation des rôles:
 - Services management
     - AD
 
+PowerShell DSC: déterminer l'état de config d'une machine sous forme d'un fichier mof (?)
+
+KB5020276
+
+SDN: software defined networking: permet d'avoir plusieures fois le même réseau en taguant les trames IP
+
+https://cteirs.sharepoint.com/:f:/s/RessourcesAFTINumrique/ErhIAiKLVqVOt_Rsa4EfXnUB9Deci28Ds13Yz7GGK4igAA?e=eBmwn7
+
+https://cteirs.sharepoint.com/sites/RessourcesAFTINumrique-CoursApprenantsBachelor/Documents%20partages/Forms/AllItems.aspx?id=%2Fsites%2FRessourcesAFTINumrique-CoursApprenantsBachelor%2FDocuments%20partages%2FPKI%20-%20Gestion%20Identité%20et%20PKI&p=true&ga=1
 
