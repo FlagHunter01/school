@@ -26,8 +26,10 @@ Docker est un moteur de conteneurisation, c'est-à-dire un outil qui permet de l
 La conteneurisation est une forme de virtualisation alternative qui n’émule pas de système d’exploitation complet. Chaque conteneur fonctionne dans un environnement qui contient les éléments strictement nécessaires à sa fonction. <br>
 Grâce à ceci, nous pouvons éclater les serveurs en plusieurs conteneurs responsables chacun d’un service. Ceci permet d’avoir un contrôle plus fin des ressources allouées et facilite la continuité de production pendant les mises à jour. En effet, il est plus facile de prédire les besoins d’un programme unique comme Apache qu’un système entier. Ainsi, les conteneurs sont moins gourmands en ressources que les machines virtuelles standard. De plus, la possibilité de gérer les conteneurs individuellement permet de cibler les arrêts programmés sans aucune répercussion sur les autres services en cours. 
 
-!!! warning "image"
-    Comparaison d’ensemble entre les conteneurs et les machines virtuelles
+<figure markdown>
+  ![Image title](https://dummyimage.com/600x400/){ loading=lazy }
+  <figcaption>Comparaison d’ensemble entre les conteneurs et les machines virtuelles</figcaption>
+</figure>  
 
 Les conteneurs présentent aussi un gros avantage pour le développement d’applications car ils permettent de s’affranchir des contraintes de l’environnement: une fois exportée avec ses dépendances, une image de conteneur est autosuffisante et peut être exécutée sur n’importe quelle machine qui prend en charge Docker, indépendamment du système d’exploitation ou de caractéristiques matérielles. 
 
@@ -42,8 +44,10 @@ Derrière son faible coût opérationnel et son interface intuitive se cache un 
 
 Ces deux daemons communiquent par gRCP (envoi de commandes via des ports réseau). 
 
-!!! warning "Image"
-    Diagramme des paquetages de haut niveau
+<figure markdown>
+  ![Image title](https://dummyimage.com/600x400/){ loading=lazy }
+  <figcaption>Diagramme des paquetages de haut niveau</figcaption>
+</figure>    
 
 Celà-dit, containerd ne crée pas les conteneurs lui-même et doit faire appel à des programmes sous-jacents prévus à cet effet. 
 
@@ -58,8 +62,10 @@ Chez Docker, le conteneur est extrait, exécuté puis géré par libcontainer. C
 
 libcontainer possède une API: runc. Cette dernière permet d'interagir avec libcontainer par ligne de commande. C’est l’API runtime officielle de la Open Container Initiative depuis que Docker leur à fait don de libcontainer. 
 
-!!! warning "image"
-    Diagramme des paquetages de bas niveau
+<figure markdown>
+  ![Image title](https://dummyimage.com/600x400/){ loading=lazy }
+  <figcaption>Diagramme des paquetages de bas niveau</figcaption>
+</figure>    
 
 ### Lien entre les deux niveaux
 
