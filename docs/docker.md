@@ -75,7 +75,10 @@ Ainsi, la shim démarre runc puis récupère le lien de parenté du conteneur au
 
 On obtient donc le diagramme de paquetages complet suivant:
 
-!!! warning "image"
+<figure markdown>
+  ![Image title](https://dummyimage.com/600x400/){ loading=lazy }
+  <figcaption>Diagramme de paquetages complet</figcaption>
+</figure>
 
 ## Sécurité
 
