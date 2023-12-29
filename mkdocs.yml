@@ -79,7 +79,7 @@ nav:
         - Sécurité: m1/uni/securite.md
     - Misc: misc.md
 #    - NOTRE PROJET: projet.md
-    - Docker: docker.md
+    - Docker: docker/index.md
 
 
 theme:
