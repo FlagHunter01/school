@@ -48,7 +48,6 @@ Ces deux daemons communiquent par gRCP (envoi de commandes via des ports réseau
   ![Image title](2.png){ loading=lazy }
   <figcaption>Diagramme des paquetages de haut niveau</figcaption>
 </figure>    
-
 Celà-dit, containerd ne crée pas les conteneurs lui-même et doit faire appel à des programmes sous-jacents prévus à cet effet. 
 
 ### Fonctionnement de bas niveau
