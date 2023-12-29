@@ -27,7 +27,7 @@ La conteneurisation est une forme de virtualisation alternative qui n’émule p
 Grâce à ceci, nous pouvons éclater les serveurs en plusieurs conteneurs responsables chacun d’un service. Ceci permet d’avoir un contrôle plus fin des ressources allouées et facilite la continuité de production pendant les mises à jour. En effet, il est plus facile de prédire les besoins d’un programme unique comme Apache qu’un système entier. Ainsi, les conteneurs sont moins gourmands en ressources que les machines virtuelles standard. De plus, la possibilité de gérer les conteneurs individuellement permet de cibler les arrêts programmés sans aucune répercussion sur les autres services en cours. 
 
 <figure markdown>
-  ![Image title](https://dummyimage.com/600x400/){ loading=lazy }
+  ![Image title](1.png){ loading=lazy }
   <figcaption>Comparaison d’ensemble entre les conteneurs et les machines virtuelles</figcaption>
 </figure>  
 
@@ -45,7 +45,7 @@ Derrière son faible coût opérationnel et son interface intuitive se cache un 
 Ces deux daemons communiquent par gRCP (envoi de commandes via des ports réseau). 
 
 <figure markdown>
-  ![Image title](https://dummyimage.com/600x400/){ loading=lazy }
+  ![Image title](2.png){ loading=lazy }
   <figcaption>Diagramme des paquetages de haut niveau</figcaption>
 </figure>    
 
@@ -63,7 +63,7 @@ Chez Docker, le conteneur est extrait, exécuté puis géré par libcontainer. C
 libcontainer possède une API: runc. Cette dernière permet d'interagir avec libcontainer par ligne de commande. C’est l’API runtime officielle de la Open Container Initiative depuis que Docker leur à fait don de libcontainer. 
 
 <figure markdown>
-  ![Image title](https://dummyimage.com/600x400/){ loading=lazy }
+  ![Image title](3.png){ loading=lazy }
   <figcaption>Diagramme des paquetages de bas niveau</figcaption>
 </figure>    
 
@@ -82,7 +82,7 @@ Ainsi, la shim démarre runc puis récupère le lien de parenté du conteneur au
 On obtient donc le diagramme de paquetages complet suivant:
 
 <figure markdown>
-  ![Image title](https://dummyimage.com/600x400/){ loading=lazy }
+  ![Image title](4.png){ loading=lazy }
   <figcaption>Diagramme de paquetages complet</figcaption>
 </figure>
 
