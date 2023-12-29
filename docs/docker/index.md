@@ -65,7 +65,7 @@ libcontainer possède une API: runc. Cette dernière permet d'interagir avec lib
 <figure markdown>
   ![Image title](3.png){ loading=lazy }
   <figcaption>Diagramme des paquetages de bas niveau</figcaption>
-</figure>    
+</figure>
 
 ### Lien entre les deux niveaux
 
