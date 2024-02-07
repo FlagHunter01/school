@@ -80,7 +80,7 @@ nav:
         - Sécurité: m1/uni/securite.md
     - Misc: misc.md
 #    - NOTRE PROJET: projet.md
-    - Docker: docker/index.md
+    - Docker: https://flaghunter01.github.io/docker-presentation/
 
 
 theme:
