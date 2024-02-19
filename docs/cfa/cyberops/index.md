@@ -26,26 +26,26 @@ Un switch avec une table saturée passe en mode hub.
 
 <p><strong>1. Which two statements are characteristics of a virus? (Choose two.)</strong></p>
 <ul>
-<li><b><span ">A virus typically requires end-user activation.</span></b></li>
-<li><b><span ">A virus can be dormant and then activate at a specific time or date.</span></b></li>
+<li><span ">A virus typically requires end-user activation.</span></b></li>
+<li><span ">A virus can be dormant and then activate at a specific time or date.</span></b></li>
 <p><strong>2. What is a characteristic of a Trojan horse as it relates to network security?</strong></p>
-<li><b><span ">Malware is contained in a seemingly legitimate executable program.</span></b></li>
+<li><span ">Malware is contained in a seemingly legitimate executable program.</span></b></li>
 <p><strong>3. What technique is used in social engineering attacks?</strong></p>
-<li><b><span ">phishing</span></b></li>
+<li><span ">phishing</span></b></li>
 <p><strong>4. What is a purpose of implementing VLANs on a network?</strong></p>
 <ul>
-<li><b><span ">They can separate user traffic.</span></b></li>
+<li><span ">They can separate user traffic.</span></b></li>
 <p><strong>5. Refer to the exhibit. A cybersecurity analyst is viewing packets forwarded by switch S2. What addresses will identify frames containing data sent from PCA to PCB?</strong></p>
 <p><span ">Src IP: 192.168.1.212</span><br />
 <p><strong>6. A cybersecurity analyst needs to collect alert data. What are three detection tools to perform this task in the Security Onion architecture? (Choose three.)</strong></p>
 <ul>
-<li><b><span ">CapME</span></b></li>
-<li><b><span ">Wazuh</span></b></li>
-<li><b><span ">Zeek</span></b></li>
+<li><span ">CapME</span></b></li>
+<li><span ">Wazuh</span></b></li>
+<li><span ">Zeek</span></b></li>
 <p><strong>7. Match the Security Onion tool with the description.</strong></p>
 <p><img decoding="async" class="aligncenter size-full wp-image-58413" src="https://itexamanswers.net/wp-content/uploads/2020/09/7Q.jpg" alt="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 3" width="625" height="523" title="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 3" srcset="https://itexamanswers.net/wp-content/uploads/2020/09/7Q.jpg 625w, https://itexamanswers.net/wp-content/uploads/2020/09/7Q-300x251.jpg 300w" sizes="(max-width: 625px) 100vw, 625px" /></p>
 <p><strong>8. In network security assessments, which type of test is used to evaluate the risk posed by vulnerabilities to a specific organization including assessment of the likelihood of attacks and the impact of successful exploits on the organization?</strong></p>
-<li><b><span ">risk analysis</span></b></li>
+<li><span ">risk analysis</span></b></li>
 <p><strong>9. Match the server profile element to the description. (Not all options are used.)</strong></p>
 <p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-58414" src="https://itexamanswers.net/wp-content/uploads/2020/09/Q9CyberOps-Associate.jpg" alt="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 4" width="490" height="524" title="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 4" srcset="https://itexamanswers.net/wp-content/uploads/2020/09/Q9CyberOps-Associate.jpg 490w, https://itexamanswers.net/wp-content/uploads/2020/09/Q9CyberOps-Associate-281x300.jpg 281w" sizes="(max-width: 490px) 100vw, 490px" /></p>
 <div class="message_box success"><p><strong>Explanation:</strong> The elements of a server profile include the following:Listening ports – the TCP and UDP daemons and ports that are allowed to be open on the server<br />
@@ -53,58 +53,58 @@ User accounts – the parameters defining user access and behavior<br />
 Service accounts – the definitions of the type of service that an application is allowed to run on a given host<br />
 Software environment – the tasks, processes, and applications that are permitted to run on the server</p></div>
 <p><strong>10. In addressing an identified risk, which strategy aims to shift some of the risk to other parties?</strong></p>
-<li><b><span ">risk sharing</span></b></li>
+<li><span ">risk sharing</span></b></li>
 <p><strong>11. What is a network tap?</strong></p>
 <p><strong>12. Match the monitoring tool to the definition.</strong></p>
 <p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-58415" src="https://itexamanswers.net/wp-content/uploads/2020/09/Q12CyberOps-Associate.jpg" alt="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 5" width="586" height="506" title="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 5" srcset="https://itexamanswers.net/wp-content/uploads/2020/09/Q12CyberOps-Associate.jpg 586w, https://itexamanswers.net/wp-content/uploads/2020/09/Q12CyberOps-Associate-300x259.jpg 300w" sizes="(max-width: 586px) 100vw, 586px" /></p>
 <p><strong>13. If a SOC has a goal of 99.999% uptime, how many minutes of downtime a year would be considered within its goal?</strong></p>
 <ul>
-<li><b><span ">Approximately 5 minutes per year.</span></b></li>
+<li><span ">Approximately 5 minutes per year.</span></b></li>
 <p><strong>14. The HTTP server has responded to a client request with a 200 status code. What does this status code indicate?</strong></p>
-<li><b><span ">The request was completed successfully.</span></b></li>
+<li><span ">The request was completed successfully.</span></b></li>
 <p><strong>15. What is an advantage for small organizations of adopting IMAP instead of POP?</strong></p>
-<li><b><span ">Messages are kept in the mail servers until they are manually deleted from the email client.</span></b></li>
+<li><span ">Messages are kept in the mail servers until they are manually deleted from the email client.</span></b></li>
 <p><strong>16. What debugging security tool can be used by black hats to reverse engineer binary files when writing exploits?</strong></p>
 <ul>
-<li><b><span ">WinDbg</span></b></li>
+<li><span ">WinDbg</span></b></li>
 <p><strong>18. What are two features of ARP? (Choose two.)</strong></p>
-<li><b><span ">If a host is ready to send a packet to a local destination device and it has the IP address but not the MAC address of the destination, it generates an ARP broadcast.</span></b></li>
-<li><b><span ">If a device receiving an ARP request has the destination IPv4 address, it responds with an ARP reply.</span></b></li>
+<li><span ">If a host is ready to send a packet to a local destination device and it has the IP address but not the MAC address of the destination, it generates an ARP broadcast.</span></b></li>
+<li><span ">If a device receiving an ARP request has the destination IPv4 address, it responds with an ARP reply.</span></b></li>
 <p><strong>19. What is a property of the ARP table on a device?</strong></p>
 <ul>
-<li><b><span ">Entries in an ARP table are time-stamped and are purged after the timeout expires.</span></b></li>
-<li><b><span ">to allow users to browse the Internet anonymously</span></b></li>
+<li><span ">Entries in an ARP table are time-stamped and are purged after the timeout expires.</span></b></li>
+<li><span ">to allow users to browse the Internet anonymously</span></b></li>
 <p><strong>21. Which two network protocols can be used by a threat actor to exfiltrate data in traffic that is disguised as normal network traffic? (Choose two.)</strong></p>
-<li><b><span ">DNS</span></b></li>
-<li><b><span ">HTTP</span></b></li>
+<li><span ">DNS</span></b></li>
+<li><span ">HTTP</span></b></li>
 <p><strong>22. What is a key difference between the data captured by NetFlow and data captured by Wireshark?</strong></p>
-<li><b><span ">NetFlow collects metadata from a network flow whereas Wireshark captures full data packets.</span></b></li>
+<li><span ">NetFlow collects metadata from a network flow whereas Wireshark captures full data packets.</span></b></li>
 <p><strong>23. Which tool captures full data packets with a command-line interface only?</strong></p>
-<li><b><span ">tcpdump</span></b></li>
+<li><span ">tcpdump</span></b></li>
 <p><strong>24. Which method can be used to harden a device?</strong></p>
-<li><b><span ">use SSH and disable the root account access over SSH</span></b></li>
+<li><span ">use SSH and disable the root account access over SSH</span></b></li>
 </ul>
 <div class="message_box success"><p><strong>Explanation:</strong> The basic best practices for device hardening are as follows:<br />
 <p><strong>25. In a Linux operating system, which component interprets user commands and attempts to execute them?</strong></p>
-<li><b><span ">shell</span></b></li>
+<li><span ">shell</span></b></li>
 <p><strong>26. A network administrator is configuring an AAA server to manage RADIUS authentication. Which two features are included in RADIUS authentication? (Choose two.)</strong></p>
-<li><b><span ">single process for authentication and authorization</span></b></li>
-<li><b><span ">hidden passwords during transmission</span></b></li>
+<li><span ">single process for authentication and authorization</span></b></li>
+<li><span ">hidden passwords during transmission</span></b></li>
 <p><strong>27. What is privilege escalation?</strong></p>
-<li><b><span ">Vulnerabilities in systems are exploited to grant higher levels of privilege than someone or some process should have.</span></b></li>
+<li><span ">Vulnerabilities in systems are exploited to grant higher levels of privilege than someone or some process should have.</span></b></li>
 <p><strong>28. What two assurances does digital signing provide about code that is downloaded from the Internet? (Choose two.)</strong></p>
-<li><b><span ">The code has not been modified since it left the software publisher.</span></b></li>
-<li><b><span ">The code is authentic and is actually sourced by the publisher.</span></b></li>
+<li><span ">The code has not been modified since it left the software publisher.</span></b></li>
+<li><span ">The code is authentic and is actually sourced by the publisher.</span></b></li>
 <p><strong>29. An IT enterprise is recommending the use of PKI applications to securely exchange information between the employees. In which two cases might an organization use PKI applications to securely exchange information between users? (Choose two.)</strong></p>
 <ul>
-<li><strong><span ">HTTPS web service</span></strong></li>
-<li><strong><span ">802.1x authentication</span></strong></li>
+<li><span>HTTPS web service</span></strong></li>
+<li><span>802.1x authentication</span></strong></li>
 <p><strong>30. Which measure can a security analyst take to perform effective security monitoring against network traffic encrypted by SSL technology?</strong></p>
-<li><b><span ">Deploy a Cisco SSL Appliance.</span></b></li>
+<li><span ">Deploy a Cisco SSL Appliance.</span></b></li>
 <p><strong>31. An administrator is trying to develop a BYOD security policy for employees that are bringing a wide range of devices to connect to the company network. Which three objectives must the BYOD security policy address? (Choose three.)</strong></p>
-<li><b><span ">Rights and activities permitted on the corporate network must be defined.</span></b></li>
-<li><b><span ">Safeguards must be put in place for any personal device being compromised.</span></b></li>
-<li><b><span ">The level of access of employees when connecting to the corporate network must be defined.</span></b></li>
+<li><span ">Rights and activities permitted on the corporate network must be defined.</span></b></li>
+<li><span ">Safeguards must be put in place for any personal device being compromised.</span></b></li>
+<li><span ">The level of access of employees when connecting to the corporate network must be defined.</span></b></li>
 <p><strong>32. Match the security policy with the description. (Not all options are used.)</strong></p>
 <p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-58455" src="https://itexamanswers.net/wp-content/uploads/2020/10/2020-10-19_200447.jpg" alt="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 7" width="727" height="843" title="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 7" srcset="https://itexamanswers.net/wp-content/uploads/2020/10/2020-10-19_200447.jpg 727w, https://itexamanswers.net/wp-content/uploads/2020/10/2020-10-19_200447-259x300.jpg 259w" sizes="(max-width: 727px) 100vw, 727px" /></p>
 <table>
@@ -128,53 +128,53 @@ Software environment – the tasks, processes, and applications that are permitt
 </tbody>
 </table>
 <p><strong>33. Match the attack to the definition. (Not all options are used.)</strong></p>
-<li><b><span ">SQL injection</span></b></li>
+<li><span ">SQL injection</span></b></li>
 <p><strong>35. What are two characteristics of Ethernet MAC addresses? (Choose two.)</strong></p>
-<li><b><span ">They are expressed as 12 hexadecimal digits.</span></b></li>
-<li><b><span ">They are globally unique.</span></b></li>
+<li><span ">They are expressed as 12 hexadecimal digits.</span></b></li>
+<li><span ">They are globally unique.</span></b></li>
 <p><strong>36. A user calls to report that a PC cannot access the internet. The network technician asks the user to issue the command <code>ping 127.0.0.1</code> in a command prompt window. The user reports that the result is four positive replies. What conclusion can be drawn based on this connectivity test?</strong></p>
-<li><b><span ">The TCP/IP implementation is functional.</span></b></li>
-<li><b><span ">They always try to cause some harm to an individual or organization.</span></b></li>
-<li><b><span ">a type of ransomware</span></b></li>
+<li><span ">The TCP/IP implementation is functional.</span></b></li>
+<li><span ">They always try to cause some harm to an individual or organization.</span></b></li>
+<li><span ">a type of ransomware</span></b></li>
 <p><strong>39. Which ICMPv6 message type provides network addressing information to hosts that use SLAAC?</strong></p>
 <li><span "><strong>router advertisement</strong></span></li>
 <p><strong>40. Which tol included in the Security Onion is a series of software plugins that send different types of data to the Elasticsearch data stores?</strong></p>
 <li><span "><strong>Beats</strong></span></li>
 <p><strong>41. Which two types of unreadable network traffic could be eliminated from data collected by NSM? (Choose two.)</strong></p>
-<li><b><span ">IPsec traffic</span></b></li>
-<li><b><span ">SSL traffic</span></b></li>
+<li><span ">IPsec traffic</span></b></li>
+<li><span ">SSL traffic</span></b></li>
 <p><strong>42. Which core open source component of the Elastic-stack is responsible for accepting the data in its native format and making elements of the data consistent across all sources?</strong></p>
 <ul>
-<li><b><span ">Logstash</span></b></li>
+<li><span ">Logstash</span></b></li>
 <p><strong>43. Match the security incident stakeholder with the role.</strong></p>
 <p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-58419" src="https://itexamanswers.net/wp-content/uploads/2020/09/Q43CyberOps-Associate.png" alt="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 9" width="551" height="504" title="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 9" srcset="https://itexamanswers.net/wp-content/uploads/2020/09/Q43CyberOps-Associate.png 551w, https://itexamanswers.net/wp-content/uploads/2020/09/Q43CyberOps-Associate-300x274.png 300w" sizes="(max-width: 551px) 100vw, 551px" /></p>
-<li><b><span ">attrition</span></b></li>
+<li><span ">attrition</span></b></li>
 <p><strong>45. Match the security organization with its security functions. (Not all options are used.)</strong></p>
 <p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-58420" src="https://itexamanswers.net/wp-content/uploads/2020/09/Q45CyberOps-Associate.png" alt="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 10" width="493" height="528" title="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 10" srcset="https://itexamanswers.net/wp-content/uploads/2020/09/Q45CyberOps-Associate.png 493w, https://itexamanswers.net/wp-content/uploads/2020/09/Q45CyberOps-Associate-280x300.png 280w" sizes="(max-width: 493px) 100vw, 493px" /></p>
 <p><strong>46. What is a characteristic of CybOX?</strong></p>
-<li><b><span ">It is a set of standardized schemata for specifying, capturing, characterizing, and communicating events and properties of network operations.</span></b></li>
+<li><span ">It is a set of standardized schemata for specifying, capturing, characterizing, and communicating events and properties of network operations.</span></b></li>
 <p><strong>47. After host A receives a web page from server B, host A terminates the connection with server B. Match each step to its correct option in the normal termination process for a TCP connection. (Not all options are used.)</strong></p>
 <p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-58421" src="https://itexamanswers.net/wp-content/uploads/2020/09/Q47CyberOps-Associate.png" alt="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 11" width="584" height="506" title="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 11" srcset="https://itexamanswers.net/wp-content/uploads/2020/09/Q47CyberOps-Associate.png 584w, https://itexamanswers.net/wp-content/uploads/2020/09/Q47CyberOps-Associate-300x260.png 300w" sizes="(max-width: 584px) 100vw, 584px" /></p>
 <p><strong>48. What are two ways that ICMP can be a security threat to a company? (Choose two.)</strong></p>
-<li><b><span ">by collecting information about a network</span></b></li>
-<li><b><span ">by providing a conduit for DoS attacks</span></b></li>
+<li><span ">by collecting information about a network</span></b></li>
+<li><span ">by providing a conduit for DoS attacks</span></b></li>
 <p><strong>49. Which three IPv4 header fields have no equivalent in an IPv6 header? (Choose three.)</strong></p>
-<li><b><span ">fragment offset</span></b></li>
-<li><b><span ">flag</span></b></li>
-<li><b><span ">identification</span></b></li>
+<li><span ">fragment offset</span></b></li>
+<li><span ">flag</span></b></li>
+<li><span ">identification</span></b></li>
 <p><strong>50. Which two <code>net</code> commands are associated with network resource sharing? (Choose two.)</strong></p>
-<li><b><span ">net share</span></b></li>
-<li><b><span ">net use</span></b></li>
+<li><span ">net share</span></b></li>
+<li><span ">net use</span></b></li>
 <p><strong>51. Match the Windows 10 Registry key with its description. (Not all options are used.)</strong></p>
 <p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-58422" src="https://itexamanswers.net/wp-content/uploads/2020/09/Q51CyberOps-Associate.png" alt="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 12" width="552" height="534" title="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 12" srcset="https://itexamanswers.net/wp-content/uploads/2020/09/Q51CyberOps-Associate.png 552w, https://itexamanswers.net/wp-content/uploads/2020/09/Q51CyberOps-Associate-300x290.png 300w" sizes="(max-width: 552px) 100vw, 552px" /></p>
 <p><strong>52. Which PDU format is used when bits are received from the network medium by the NIC of a host?</strong></p>
-<li><b><span ">frame</span></b></li>
+<li><span ">frame</span></b></li>
 <p><strong>53. A user is executing a tracert to a remote device. At what point would a router, which is in the path to the destination device, stop forwarding the packet?</strong></p>
-<li><b><span ">when the value in the TTL field reaches zero</span></b></li>
+<li><span ">when the value in the TTL field reaches zero</span></b></li>
 <p><strong>54. Refer to the exhibit. What solution can provide a VPN between site A and site B to support encapsulation of any Layer 3 protocol between the internal networks at each site?</strong></p>
-<li><b><span ">a GRE tunnel</span></b></li>
+<li><span ">a GRE tunnel</span></b></li>
 <p><strong>55. For what purpose would a network administrator use the Nmap tool?</strong></p>
-<li><b><span ">detection and identification of open ports</span></b></li>
+<li><span ">detection and identification of open ports</span></b></li>
 <p><strong>56. Match the network service with the description.</strong></p>
 <p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-58424" src="https://itexamanswers.net/wp-content/uploads/2020/09/Q56CyberOps-Associate.png" alt="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 14" width="597" height="524" title="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 14" srcset="https://itexamanswers.net/wp-content/uploads/2020/09/Q56CyberOps-Associate.png 597w, https://itexamanswers.net/wp-content/uploads/2020/09/Q56CyberOps-Associate-300x263.png 300w" sizes="(max-width: 597px) 100vw, 597px" /></p>
 <p><strong>57. A client application needs to terminate a TCP communication session with a server. Place the termination process steps in the order that they will occur. (Nat all options are used.)</strong></p>
@@ -451,10 +451,10 @@ Software environment – the tasks, processes, and applications that are permitt
 <p><strong>162. A technician needs to verify file permissions on a specific Linux file. Which command would the technician use?</strong></p>
 <li><span "><strong>ls -l</strong></span></li>
 <p><strong>163. Which two protocols may devices use in the application process that sends email? (Choose two.)</strong></p>
-<li><b><span "><b>DNS</b></span></b></li>
-<li><b><span "><b>SMTP</b></span></b></li>
+<li><span "><b>DNS</b></span></b></li>
+<li><span "><b>SMTP</b></span></b></li>
 <p><strong>164. Which file system type was specifically created for optical disk media?</strong></p>
-<li><b><span "><b>CDFS</b></span></b></li>
+<li><span "><b>CDFS</b></span></b></li>
 <p><strong>165. A piece of malware has gained access to a workstation and issued a DNS lookup query to a CnC server. What is the purpose of this attack?</strong></p>
 <li><span "><strong>to send stolen sensitive data with encoding</strong></span></li>
 <p><strong>166. Refer to the exhibit. Which field in the Sguil event window indicates the number of times an event is detected for the same source and destination IP address?</strong><br />
@@ -465,8 +465,8 @@ Software environment – the tasks, processes, and applications that are permitt
 <li><span "><strong>Analyze web log alerts and historical search data.</strong></span></li>
 <li><span "><strong>Build playbooks for detecting browser behavior.</strong></span></li>
 <p><strong>169. Which two ICMPv6 messages are used during the Ethernet MAC address resolution process? (Choose two.)</strong></p>
-<li><strong><span ">neighbor solicitation </span></strong></li>
-<li><strong><span ">neighbor advertisement</span></strong></li>
+<li><span>neighbor solicitation </span></strong></li>
+<li><span>neighbor advertisement</span></strong></li>
 <p><strong>170. What best describes the destination IPv4 address that is used by multicasting?</strong></p>
 <li><span "><strong>a single IP multicast address that is used by all destinations in a group</strong></span></li>
 <p><strong>171. What is the result of using security devices that include HTTPS decryption and inspection services?</strong></p>
@@ -478,23 +478,23 @@ Software environment – the tasks, processes, and applications that are permitt
 <p><strong>174. A threat actor has identified the potential vulnerability of the web server of an organization and is building an attack. What will the threat actor possibly do to build an attack weapon?</strong></p>
 <li><span "><strong>Obtain an automated tool in order to deliver the malware payload through the vulnerability.</strong></span></li>
 <p><strong>175. Which tool included in the Security Onion is a series of software plugins that send different types of data to the Elasticsearch data stores?</strong></p>
-<li><strong><span ">Beats</span></strong></li>
+<li><span>Beats</span></strong></li>
 <p><strong>176. Which term is used to describe the process of identifying the NSM-related data to be gathered?</strong></p>
-<li><strong><span ">data reduction</span></strong></li>
+<li><span>data reduction</span></strong></li>
 <p><strong>177. Match the alert classification with the description.</strong></p>
 <p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-65717" src="https://itexamanswers.net/wp-content/uploads/2020/09/2021-04-16_143615.jpg" alt="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 30" width="759" height="599" title="CyberOps Associate (Version 1.0) - FINAL Exam (Answers) 34" srcset="https://itexamanswers.net/wp-content/uploads/2020/09/2021-04-16_143615.jpg 759w, https://itexamanswers.net/wp-content/uploads/2020/09/2021-04-16_143615-300x237.jpg 300w" sizes="(max-width: 759px) 100vw, 759px" /></p>
 <p><strong>178. According to NIST, which step in the digital forensics process involves preparing and presenting information that resulted from scrutinizing data?</strong></p>
-<li><strong><span ">reporting</span></strong></li>
+<li><span>reporting</span></strong></li>
 <p><strong>179. Refer to the exhibit. A cybersecurity analyst is using Sguil to verify security alerts. How is the current view sorted?</strong></p>
-<li><strong><span ">by frequency</span></strong></li>
+<li><span>by frequency</span></strong></li>
 <p><strong>180. Which two options are window managers for Linux? (Choose two.)</strong></p>
-<li><strong><span ">Gnome</span></strong></li>
+<li><span>Gnome</span></strong></li>
 <li><span "><strong>KDE</strong></span></li>
 <p><strong>181. What are the two methods that a wireless NIC can use to discover an AP? (Choose two.)</strong></p>
-<li><strong><span ">transmitting a probe request</span></strong></li>
+<li><span>transmitting a probe request</span></strong></li>
 <li><span "><strong>receiving a broadcast beacon frame</strong></span></li>
 <p><strong>182. A client device has initiated a secure HTTP request to a web browser. Which well-known port address number is associated with the destination address?</strong></p>
-<li><strong><span ">443</span></strong></li>
+<li><span>443</span></strong></li>
 <p><strong>183. Which term describes evidence that is in its original state?</strong></p>
 <li><span "><strong>Best evidence</strong></span></li>
 <p><strong>184. Which three statements describe a DHCP Discover message? (Choose three.)</strong></p>
