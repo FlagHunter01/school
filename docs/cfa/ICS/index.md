@@ -63,3 +63,35 @@ Toutes ses méthodes ont 3 phases:
 - wsock32
 - ws2_32
 - netapi32
+
+## Devoir
+
+!!! info "A rendre avant le 10 par email"
+    Ecrire un rapport qui répond aux tâches indiquées avec des captures d'écran
+
+### 1 - Lab ICS
+
+#### Requis
+
+- OpenPLC avec ScadaBR (HMI)
+    - La config se fait dans Scada 
+- OpenPLC - Factory IO (PLC)
+    - OpenPLC: master
+    - Factory IO: Server
+
+#### Travail
+
+##### PLC -> Factory IO
+
+- Prendre la scène 4 dans Factory IO
+- Configurer la scène avec un serveur Modbus TCP avec inputs, coils et registers comme nécessaire
+- Créer le programme pour faire tourner l'usine (comme on veut)
+- Simuler / debugger / uploader le programme et vérifier que tout fonctionne
+
+##### HMI -> PLC
+
+- Lancer ScadaBR (`dhcclient` mais on a assez de compétences pour ca :smile:)
+- Configurer pour se connecter a l'OpenPLC
+- Créer une HMI pour la scène (libre)
+- VGérifier que lorsque Factory IO est en mode RUN, la HMI récupère les états de chaque Input et Coil
+- Réaliser des attaques sur OpenPLC et HMI(Injection, DOS etc)
