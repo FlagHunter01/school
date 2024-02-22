@@ -10,6 +10,8 @@ description: Cours de sécurité ICS
 
 Mieux que Hack the Box: [seedsecuritylabs.org](https://seedsecuritylabs.org)
 
+Certif SANS: [SANS.org](https://www.sans.org/cyber-security-courses/advanced-exploit-development-penetration-testers/)
+
 Pour utiliser Wireshark sur un switch, il faut mettre son port en mode SPAN pour que tout le traffic soit mirror dessus. 
 
 ## Ethical hacking
