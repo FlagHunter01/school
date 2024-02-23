@@ -54,3 +54,39 @@ Le principe de base est l'automatisation!
 - Mal maîtriser son infrastructure
 - Détruire des indices (on commence par faire un snapshot avant de toucher)
 
+## Détection
+
+C'est le fait de repérer pour prévenir et alerter.
+
+Moyens:
+
+- EDR/XDR/comportemental
+- Logs
+- SIEM
+- SOAR (orchestrateur, il décide s'il faut notifier et s'il faut mener des actions avec des procédures prédéfinies. Il est complémentaire au SIEM)
+- IDS/IPS
+- Proxy
+- Surveillance physique
+    - Locaux sensibles:
+        - Datacenters
+        - Locaux techniques
+    - Sécurité:
+        - Fermer a clé (bof)
+        - Badges avec logs
+- ==Les gens de la sécurité (formés et prêts)==
+    - Lois
+    - Gouvernance
+    - ==Procédures==
+- Les utilisateurs (c'est les capteurs les plus performants s'ils sont bien formés)
+    - Il faut leur parler en symptomes
+
+Choses a surveiller:
+
+- Web/CMS
+- "Cloud de fichiers"
+- Messagerie
+- Bases de données
+- VPN
+- Backups
+
+Tout ceci est lié a deux choses: les logs et l'authentification.
