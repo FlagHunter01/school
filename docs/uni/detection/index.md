@@ -185,3 +185,7 @@ Problèmes d'authentification et de session
 Erreurs de restriction d'URL
 bots - Comportemental
 DOS
+
+### Prochaine fois
+
+Finir le document. Procédures a établir pour détection efficaces. 
