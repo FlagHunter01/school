@@ -3,7 +3,8 @@ title: Défense / supervision / Gestion d'incidents et de crise
 ---
 
 !!! info "Prof"
-    Olivier CALEFF
+    [Olivier CALEFF](paris.saclay@caleff.com)
+    
 
 ## Intro
 
