@@ -1,5 +1,6 @@
 ---
 title: Défense / supervision / Gestion d'incidents et de crise
+description: Cours de détection et de réaction aux menaces de sécurité
 ---
 
 !!! info "Prof"
