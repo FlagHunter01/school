@@ -188,6 +188,48 @@ Erreurs de restriction d'URL
 bots - Comportemental
 DOS
 
-### Prochaine fois
+## Devoir
 
-Finir le document. Procédures a établir pour détection efficaces. 
+!!! info "Consignes et définitions"
+    Finir le document. Procédures a établir pour détection efficaces. 
+
+    - IDS: Système de Détection des Intrusions: détecte les pattenrs d'attaques connues dans le trafic réseau. 
+    - IPS: Analyse les paquet
+    - EDR: Endpoint Detection and Response: Antivirus sur les terminaux
+    - Plus généralement SIEM Security Information and Event Management: collecte, analyse et archivage des informations sur les évènements de sécurité 
+
+### Objectif
+
+Détecter efficacement les incidents de sécurité relatifs au web. 
+
+### Types d'incidents identifiés
+
+- Accès (direct) à des ressources interdites (lecture ou modification)
+    - Injection de code dans le PHP / SQL
+- Usurpation d'identité
+    - Vol de session
+    - Authentification [Formation des utilisateurs - notif de connexion]
+- DOS
+- Fuite d'informations confidentielles [surveillance des infromations fuitées connues]
+
+### Solutions de détection
+
+Les solutions techniques reposent sur l'implémentation d'un SIEM. 
+La détection d'évènements anormaux doit être automatisée au maximum. Ce qui ne peut pas être automatisé doit générer des alertes qui notifient les bonnes personnes le plus vote possible. 
+
+- Accès direct à des ressources interdites
+    - L'injection peut être détectée par des logiciels comme Snort. L'interaction avexc des fichiers sensibles devrait &galement être loguée et notifiée. 
+- Usurpation d'identité
+    - Le vol de session est plus facile a contrer qu'a identifier. Bien qu'il est possible de détecter des chaines qui indiquent une attaque XSS (injection d'un script a travers un lien sur un autre site), ou de détecter des chevaux de troie avec un EDR sur le client, l'action la plus productive reste la sécurisation des méthodes de connexion. 
+    - Les tentatives d'authentification doivent notifier immédiatement le propriétaire du compte afin qu'il puisse identifier une tenttative de connexion malfaisante. En cas d'échec d'authentification, le SIEM doit également notifier l'équipe de sécurité. 
+- Les attaques DOS et DDOS peuvent être détectées en comparant le trafic actuel avec le trafic habituel ou prévu. 
+- Il est sage d'automatiser la recherche d'informations fuitées sur des bases d'information dédiées pour que l'équipe de sécurité soit notifiée en cas de fuite d'informations. 
+
+En plus des procédures techniques ci-dessus, il est important de préparer le personnel pour maximiser l'efficacité du dispositif. 
+
+- Les messages d'alerte doivent être les plus précis possibles et cibler le personnel compétent.
+- Des procédures calires doivent être établies pour chaque type d'incident identifié. 
+- Le personnel de l'équipe de sécurité doit être entrainé avec des répétitions (annoncées ou non)
+- Les utilisateurs (hors équipes IT) doivent être sensibilisés et formés aux "gestes de premiers secours". Par exemple, s'ils sont notifiés d'une connexion dont ils ne sont pas les auteurs, ils doivent savoir qui et comment prévenir. 
+- Il est important de former l'ensemble des utilisateurs, notamment les membres de la direction qui ont souvent des droits à outrance.  
+
