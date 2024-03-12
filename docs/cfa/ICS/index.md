@@ -95,3 +95,10 @@ Toutes ses méthodes ont 3 phases:
 - Créer une HMI pour la scène (libre)
 - VGérifier que lorsque Factory IO est en mode RUN, la HMI récupère les états de chaque Input et Coil
 - Réaliser des attaques sur OpenPLC et HMI(Injection, DOS etc)
+
+## OWASP top 10 & AppSec
+
+Formule de risque simplifiée: Risque = Impact * AssetValue<br>
+Mais aussi: Risque = Vunérabilité, attaque, surface d'attaque, exploit
+
+
