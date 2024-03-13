@@ -93,7 +93,7 @@ Toutes ses méthodes ont 3 phases:
 - Lancer ScadaBR (`dhcclient` mais on a assez de compétences pour ca :smile:)
 - Configurer pour se connecter a l'OpenPLC
 - Créer une HMI pour la scène (libre)
-- VGérifier que lorsque Factory IO est en mode RUN, la HMI récupère les états de chaque Input et Coil
+- Vérifier que lorsque Factory IO est en mode RUN, la HMI récupère les états de chaque Input et Coil
 - Réaliser des attaques sur OpenPLC et HMI(Injection, DOS etc)
 
 ## OWASP top 10 & AppSec
