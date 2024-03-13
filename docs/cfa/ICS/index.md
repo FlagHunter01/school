@@ -101,4 +101,4 @@ Toutes ses méthodes ont 3 phases:
 Formule de risque simplifiée: Risque = Impact * AssetValue<br>
 Mais aussi: Risque = Vunérabilité, attaque, surface d'attaque, exploit
 
-
+[Logiciel de hijack de Java](https://github.com/yehgdotnet/JHijack)
