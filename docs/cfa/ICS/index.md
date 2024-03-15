@@ -64,7 +64,7 @@ Toutes ses méthodes ont 3 phases:
 - ws2_32
 - netapi32
 
-## Devoir
+## Devoir 1
 
 !!! info "A rendre avant le 10 par email"
     Ecrire un rapport qui répond aux tâches indiquées avec des captures d'écran
@@ -102,3 +102,15 @@ Formule de risque simplifiée: Risque = Impact * AssetValue<br>
 Mais aussi: Risque = Vunérabilité, attaque, surface d'attaque, exploit
 
 [Logiciel de hijack de Java](https://github.com/yehgdotnet/JHijack)
+
+## Devoir 2
+
+[https://seedsecuritylabs.org/Labs_20.04/web](Labs)
+
+```
+docker-compose build
+docker-compose up -d
+docker ps
+dockps
+docksh <n° recu a la commande précédente>
+```
