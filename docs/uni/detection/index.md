@@ -246,6 +246,12 @@ Il est primordial de réévaluer au fur et a mesure du développement de l'incid
 - Decieve
 - Destroy
 
+!!! warning "J'ai lâché après"
+    C'est assez confus, je vois pas le rapport avec le court et ce qu'il raconte.<br>
+    J'espère qu'on aura son diapo
+
+[https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1](Lien du first)
+
 ---
 
 ## Devoir 1
