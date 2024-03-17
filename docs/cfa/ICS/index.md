@@ -105,7 +105,7 @@ Mais aussi: Risque = Vunérabilité, attaque, surface d'attaque, exploit
 
 ## Devoir 2
 
-[https://seedsecuritylabs.org/Labs_20.04/web](Labs)
+[Labs](https://seedsecuritylabs.org/Labs_20.04/web)
 
 ```
 docker-compose build
