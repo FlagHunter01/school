@@ -4,7 +4,7 @@ description: Cours de détection et de réaction aux menaces de sécurité
 ---
 
 !!! info "Prof"
-    [Olivier CALEFF](paris.saclay@caleff.com)
+    [Olivier CALEFF <paris.saclay@caleff.com>](mailto:paris.saclay@caleff.com)
     
 
 ## Intro
@@ -165,30 +165,96 @@ Associations a rejoindre:
     - Mode normal & mode dégradé
     - Populations internes et externes
 
+### ISO27035
+
+Eléments a retenir:
+
+- Approche structurée
+- Procesus de gestion des incidents de sécurité
+- Des phases de la gestion des incidents
+- Une équipe de réponse aux incidents de sécurité (CSIRT)
+- Des indications du processus de gestion des incidents de sécurité avec les autres processus dans l'organisme
+- Une organisation du processus de gestion des incidents de sécurité
+
+Phases : 4+1
+
+1. Planifier et préparer
+- Détecter & signaler
+- Evaluer & décider
+- Répondre
+- Tirer les enseignements
+
+#### Planifier et préparer
+
+- politique de gestion des incidents de sécurité
+- Aspects légaux et reglementaires de la gestion d'incidents
+- Catégories d'incidents de sécurité
+- Méthodes de classement ou de typologie d'incidents de sécurité CVSS, ISO27035
+- Intéractions avec d'autres référentiels ou d'autres politiques
+- Modélisation du système de gestion des incidents de sécurité
+- Procédures
+- Enregistrement des évènements de sécurité et déclaration des évènements de sécurité
+- Définition des activités d'une équipe de réponse aux incidents de sécurité (CSIRT)
+- Mise en oeuvre de son CSIRT
+- Support technique et opérationnel
+- Formation et sensibilisation
+- Test de son système de gestion des incidents de sécurité et des exercices
+
+#### Détecter et signaler
+
+- Activités de l'équipe opérationnelle de détection des incidents de sécurité de l'information
+    - Run
+- Détection d'évènements
+    - Positionnement, seuils, suivi
+- Rapport d'activité sur les évènements
+    - Reporting
+- Test d'efficacvité
+    - Exercices, audit
+
+#### Evaluer et décider
+
+- Activités de l'équipe opérationnelle d'analyse des incidents de sécurité de l'information
+- Analyse immédiate et décision initiale
+- Appréciation et confirmation de l'incident.
+
+Il est primordial de réévaluer au fur et a mesure du développement de l'incident. 
+
+#### Réponse a incident
+
+- Réponse immédiate
+- Réponse a postériori
+- Gestion d ela crise
+- Analyse inforensique
+- Communication
+- Escalade
+- Journalisation de l'activité et changement
+
+#### Tirer les enseignements
+
+- Faire un bilan
+- Capitaliser
+- Féfinir les axes d'amélioration
+- Améliorer la capacité de réaction en cas de nouvelle occurence d'un incident similaire
+- Limiter les risques d'occurence d'un incident similaire
+
+### Killchain
+
+- Detect
+- Deny
+- Disrupt
+- Degrade
+- Decieve
+- Destroy
+
+!!! warning "J'ai lâché après"
+    C'est assez confus, je vois pas le rapport avec le court et ce qu'il raconte.<br>
+    J'espère qu'on aura son diapo
+
+[https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1](Lien du first)
+
 ---
 
-## Notes de groupe
-
-- Silvain
-- Mergrim
-- Tim
-- Rudi
-
-- Cross site scripting
-    - PHPIDS avec expressions régulières
-- Injection
-- Exéciution malveillante  de fichiers PHP
-    - Logs PHP
-- Insecure object reference
-    - Patterns des requetes 
-Cross site request forgery
-Fuite d'info et mauvaise gestion d'erreur
-Problèmes d'authentification et de session
-Erreurs de restriction d'URL
-bots - Comportemental
-DOS
-
-## Devoir
+## Devoir 1
 
 !!! info "Consignes et définitions"
     Finir le document. Procédures a établir pour détection efficaces. 
