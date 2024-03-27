@@ -254,7 +254,7 @@ Il est primordial de réévaluer au fur et a mesure du développement de l'incid
 
 ---
 
-## Devoir 1
+## Devoir 
 
 !!! info "Consignes et définitions"
     Finir le document. Procédures a établir pour détection efficaces. 
