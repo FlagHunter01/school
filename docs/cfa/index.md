@@ -1,6 +1,6 @@
 ---
 title: CFA
-description: Page d'acceuil de l'onglet CFA
+description: Cette partie regroupe tous les cours du CFA.
 ---
 
-Cet onglet rassemble toutes les ressources provenant du CFA.
+Cette partie regroupe tous les cours du CFA.
