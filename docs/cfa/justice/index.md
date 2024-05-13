@@ -35,4 +35,32 @@ Toute se fait hors ligne, le PC d'analyse est chiffré et les serveurs de stocka
 - Tri et classification de la donnée brute. 
 - Un premier raffinage se fait automatiquement avec un logiciel qui lit les partions etc.
 - Ensuite les données sotn analysées manuellement, c'est cette partie qui a de la plusvalue. 
+- Lecture des fichiers de cache.
+- Artefacts d'applis (medias, logs, historiques, artéfacts de navigation et de système (dernier emplacment de sauvegarde via clé de registre par exemple)).
+    - Tout ceci prend beaucoup de temps.
 
+### Présentation
+
+- Rédaction d'un rapport direct et factuel, sans émttre de jugement / interprétation.
+- Il vaut mieux donner trop d'infos que pas assez
+
+## Tsurugi
+
+- Kali du forensic (DFIR), il faut connaitre les outils pour pouvoir s'en servir. 
+- Une tonne d'outils
+
+## Computer forensics
+
+### Récupération des données
+
+- EWF: compresse les images extraites. Super pour les disques qui n'ont pas été remplis jusqu'au bout.
+
+### Aquisition et préservation (TP)
+
+### Theorie sur la récupération des données
+
+### Présentation d'artéfacts spécifiques
+
+### Autopsy
+
+### TP
