@@ -36,7 +36,8 @@ nav:
       - Forensic CNPP: cfa/forensic/index.md
       - Sécurité ICS: cfa/ICS/index.md
       - CTF: cfa/ctf/index.md
-      - Géopolitique: cfa/geo.index.md
+      - Géopolitique: cfa/geo/index.md
+      - Justice: cfa/justice/index.md
     - M1: 
       - m1/m1.md
       - CFA:
