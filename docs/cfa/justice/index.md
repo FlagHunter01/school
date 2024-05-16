@@ -64,3 +64,14 @@ Toute se fait hors ligne, le PC d'analyse est chiffré et les serveurs de stocka
 ### Autopsy
 
 ### TP
+
+Pour voir les instantanés cachés du système:
+```
+vssadmin list shadows
+```
+
+Pour y accéder, il faut créer un soft link avec le CMD:
+```
+cd <ou tu veux le lien>
+mklink \d shadowcopy \\?\GLOBALROOT\Device\XXX\
+```
