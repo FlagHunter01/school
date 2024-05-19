@@ -2,7 +2,10 @@
 title: Bienvenue dans mon bordel scolaire
 ---
 
-!!! info "Le site est hebergé directement sur Github"
+!!! warning "Archivage du site"
+    Après le dernier cours, le site sera disponible sur [https://school.frolov.eu](https://school.frolov.eu). Le GitHub sera archivé.
+    
+??? info "Le site est hebergé directement sur Github"
     [![ci](https://github.com/FlagHunter01/school/actions/workflows/ci.yml/badge.svg)](https://github.com/FlagHunter01/school/actions/workflows/ci.yml)
 
     On peut faire des modifications **en live** en éditant [le projet associé](https://github.com/FlagHunter01/school) grâce aux icônes :material-file-document-edit-outline:.
