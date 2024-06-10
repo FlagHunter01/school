@@ -119,7 +119,7 @@ Elaboration par l'ANSSI et le Club EBIOS.
 !!! abstract "Analyse des risques"
     !!! warning "A compléter"
 
-!!! abstract "Traitement des risques
+!!! abstract "Traitement des risques"
     !!! warning "A compléter"
 
 !!! abstract "Plan d'actions de sécurité"
