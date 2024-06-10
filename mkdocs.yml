@@ -38,6 +38,7 @@ nav:
       - CTF: cfa/ctf/index.md
       - Géopolitique: cfa/geo/index.md
       - Digital Forensic Science: cfa/justice/index.md
+      - PROJET: cfa/projet/index.md
     - M1: 
       - m1/m1.md
       - CFA:
