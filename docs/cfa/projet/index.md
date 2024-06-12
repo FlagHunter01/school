@@ -93,6 +93,8 @@ Permet de se tenir a jour sur les actualités et outils.
 
 #### Réseaux
 
+!!! warning "Je dormais chez moi"
+
 #### Linux
 
 ### Reconnaissance passive
@@ -100,6 +102,17 @@ Permet de se tenir a jour sur les actualités et outils.
 ### Reconnaissance active
 
 ### Evaluation de vulnérabilité
+
+Les scanners de vulnérabilités détectgent les versions des logiciels sur le système et cherchent des vulnérabilités connues qui leur sont associés. 
+
+- Nessus
+- Metasploit
+- Combinaison Nessus/Metasploit
+- OpenVAS (un peu moins efficace)
+- Nmap
+
+Les scanners sont très efficaces pour l'audit, mais très bruillants donc inadaptés au redteam. 
+Il y a aussi beaucoup de faux positifs/négatifs. 
 
 ### Metasploit
 
@@ -114,3 +127,11 @@ Permet de se tenir a jour sur les actualités et outils.
 ### Définitions
 
 ### Technique
+
+---
+
+## Mardi
+
+- Config réseau classique sur les 3 machines
+- `for addr in $(seq 1 254); do arping 192.168.2.$addr -c 1 | grep "bytes from" | cut -d " " -f 5 | cut -d "(" -f 2 | cut -d ")" -f 1 >> liste.txt & done`
+- `netdiscover -p`
