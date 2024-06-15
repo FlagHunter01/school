@@ -135,3 +135,106 @@ Il y a aussi beaucoup de faux positifs/négatifs.
 - Config réseau classique sur les 3 machines
 - `for addr in $(seq 1 254); do arping 192.168.2.$addr -c 1 | grep "bytes from" | cut -d " " -f 5 | cut -d "(" -f 2 | cut -d ")" -f 1 >> liste.txt & done`
 - `netdiscover -p`
+
+## PROJET
+
+!!! info "Exécution en root"
+    Puisque nous travaillons sur des VMs hors production, je fais tout en root par facilité. 
+
+!!! info "Windows Firewall"
+    J'ai désactivé le Windows Firewall pour que la machine soit plus exploitable. 
+
+!!! note "Résultats des commandes"
+    J'ai tronqué certains résultats pour augmenter la lisibilité du rapport, par exemple en enlevant la verbosité excessive qui donne des informations qui ne nous concerne pas ou les lignes qui sont redondantes.
+
+### Premier TP
+
+#### Configuration réseau
+
+```sh title="/etc/network/interfaces" 
+auto eth0
+iface eth0 inet static
+address 192.168.10.10 
+# .20 pour Metasploit et .30 pour Windows
+netmask 255.255.255.0
+```
+
+On redémare le service de networking puis on vérifie la configuration réseau:
+
+```bash
+systemctl restart networking
+ip a
+```
+
+#### Phase passive
+
+##### arping
+
+Description de la commande:
+
+- On exécute la commande dans une boucle pour toutes les addresses allant de 1 à 254
+- On utilise `-c` pour spécifier qu'on n'envoie qu'un paquet par requête
+- On utilise `-i` pour spécifier l'interface a utiliser (sinon on recoit beaucoup d'alertes, la commande étant déjà très verbeuse de base)
+- Dans le résultat, on cherche les lignes qui correspondent à une réponse positives grâce a grep. Elles contiennent toutes "bytres from"
+- Avec cut, nous sélectionnons la partie de la réponse qui contient l'IP en découpant la ligne avec le caractère ++space++
+- Avec tr, on supprime les caractères innutiles
+- On envoie la sortie vers le fichier `IpList`
+
+La commande optimisée a alors cette forme:
+
+```bash
+for addr in $(seq 1 254); do arping 192.168.10.$addr -c 1 -i eth0 | grep "bytes from" |  cut -d' ' -f5 | tr -d "():" >> IpList & done
+```
+
+Le fichier `IpList` prend alors le contenu suivant:
+
+```title="IpList" linenums="1"
+```
+
+!!! note "Architecture réseau"
+    Bien que j'ai fait la suite des exercice en réseau, j'ai recommencé sur un réseau virtuel avec seulement mes machines par soucis d'efficacité et de propreté.
+
+##### netdiscover
+
+On teste netdiscover:
+
+```
+netdiscver -i eth0
+```
+```
+Currently scanning: 172.16.105.0/16   |   Screen View: Unique Hosts                                                           
+                                                                                                                               
+ 3 Captured ARP Req/Rep packets, from 3 hosts.   Total size: 180                                                               
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.10.20   00:0c:29:6a:b4:8b      1      60  VMware, Inc.                                                                
+ 192.168.10.30   00:0c:29:b1:ce:95      1      60  VMware, Inc.    
+```
+
+##### hping
+
+Description de la commande: 
+
+- On exécute la commande dans une boucle pour toutes les addresses allant de 1 à 254
+- On utilise `--icmp` pour spécifier le protocole a utiliser
+- On utilise `-c` pour spécifier qu'on n'envoie qu'un paquet ar requête
+- On cherche les résultats positifs grâce a grep. Les résultats positifs spécifient la longueur avec `len=`
+- COmme pour arping, on utilise `cut` et `tr` pour isoler l'IP du résultat
+- On envoie la sortie vers IpList2
+
+La commande optimisée a alors cette forme:
+
+```bash
+for addr in $(seq 1 254); do hping3 192.168.10.$addr --icmp -c 1 | grep "len=" | cut -d' ' -f2 | tr -d "ip=" >> IpList2 & done
+```
+
+Le fichier IpList2 prend alors le contenu suivant:
+
+```title="IpList2" linenums="1"
+192.168.10.20
+192.168.10.30
+```
+
+#### Phase active
+
