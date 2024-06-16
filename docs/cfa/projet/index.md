@@ -588,3 +588,159 @@ Network Distance: 1 hop
 OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 16.83 seconds
 ```
+
+### TP nmap
+
+Test des en-têtes HTTP:
+
+```
+nmap -sV --script http-headers 192.168.10.20 -p 80
+```
+```
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-16 11:37 EDT
+Stats: 0:00:10 elapsed; 0 hosts completed (0 up), 1 undergoing ARP Ping Scan
+Parallel DNS resolution of 1 host. Timing: About 0.00% done
+Nmap scan report for 192.168.10.20
+Host is up (0.00045s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+|_http-server-header: Apache/2.2.8 (Ubuntu) DAV/2
+| http-headers: 
+|   Date: Sun, 16 Jun 2024 03:47:04 GMT
+|   Server: Apache/2.2.8 (Ubuntu) DAV/2
+|   X-Powered-By: PHP/5.2.4-2ubuntu5.10
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+MAC Address: 00:0C:29:6A:B4:8B (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 19.43 seconds
+```
+
+Test des méthodes HTTP disponibles:
+
+```
+nmap --script http-methods.nse --script-args http-methods.retest=1 192.168.10.20 -n -p 80
+```
+```
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-16 11:46 EDT
+Nmap scan report for 192.168.10.20
+Host is up (0.00025s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS
+|   Status Lines: 
+|     HEAD: HTTP/1.1 200 OK
+|     GET: HTTP/1.1 200 OK
+|     OPTIONS: HTTP/1.1 200 OK
+|_    POST: HTTP/1.1 200 OK
+MAC Address: 00:0C:29:6A:B4:8B (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.27 seconds
+```
+
+Test WannaCry :
+
+```
+nmap -sC -p 445 -max-hostgroup 3 -open --script smb-vuln-ms17-010.nse 192.168.10.20 -oX WannaCryTest.xml
+```
+```
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-16 11:49 EDT
+Stats: 0:00:09 elapsed; 0 hosts completed (0 up), 1 undergoing ARP Ping Scan
+Parallel DNS resolution of 1 host. Timing: About 0.00% done
+Nmap scan report for 192.168.10.20
+Host is up (0.00037s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+MAC Address: 00:0C:29:6A:B4:8B (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 13.24 seconds
+```
+
+### BDD Metasploit
+
+```
+nmap 192.168.10.20 -oX ScanNmap
+systemctl start postgresql
+msfdb init
+msfconsole
+db_status
+workspace
+workspace -a lab
+db_import /home/kali/ScanNmap
+hosts
+db_nmap -A 192.168.10.30
+db_export -f xml /home/kali/export.xml
+```
+```
+use auxiliary/scanner/portscan/tcp
+hosts -c address,os_flavor -S Linux -R
+```
+```
+
+Hosts
+=====
+
+address  os_flavor
+-------  ---------
+
+[*] The list is empty, cowardly refusing to set RHOSTS
+```
+```
+hosts -c address,os_flavor -S Unknown -R
+```
+```
+
+Hosts
+=====
+
+address        os_flavor
+-------        ---------
+192.168.10.20
+
+RHOSTS => 192.168.10.20
+```
+```
+back
+services 192.168.10.20 -c name,info
+```
+```
+Services
+========
+
+host           name          info
+----           ----          ----
+192.168.10.20  ftp
+192.168.10.20  ssh
+192.168.10.20  telnet
+192.168.10.20  smtp
+192.168.10.20  domain
+192.168.10.20  http
+192.168.10.20  rpcbind
+192.168.10.20  netbios-ssn
+192.168.10.20  microsoft-ds
+192.168.10.20  exec
+192.168.10.20  login
+192.168.10.20  shell
+192.168.10.20  rmiregistry
+192.168.10.20  ingreslock
+192.168.10.20  nfs
+192.168.10.20  ccproxy-ftp
+192.168.10.20  mysql
+192.168.10.20
+192.168.10.20  postgresql
+192.168.10.20  vnc
+192.168.10.20  x11
+192.168.10.20  irc
+192.168.10.20
+192.168.10.20  ajp13
+192.168.10.20
+192.168.10.20
+```
+
