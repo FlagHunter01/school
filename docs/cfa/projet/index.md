@@ -220,7 +220,7 @@ Description de la commande:
 - On utilise `--icmp` pour spécifier le protocole a utiliser
 - On utilise `-c` pour spécifier qu'on n'envoie qu'un paquet ar requête
 - On cherche les résultats positifs grâce a grep. Les résultats positifs spécifient la longueur avec `len=`
-- COmme pour arping, on utilise `cut` et `tr` pour isoler l'IP du résultat
+- Comme pour arping, on utilise `cut` et `tr` pour isoler l'IP du résultat
 - On envoie la sortie vers IpList2
 
 La commande optimisée a alors cette forme:
@@ -236,5 +236,355 @@ Le fichier IpList2 prend alors le contenu suivant:
 192.168.10.30
 ```
 
-#### Phase active
+#### Phase active - couche 4
 
+##### nmap
+
+Test UDP de toutes les adresses avec tous les ports de 1 à 100:
+
+```
+nmap 192.168.10.1-254 -sU -p 1-100
+```
+```
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-16 05:32 EDT
+Stats: 0:00:16 elapsed; 251 hosts completed (2 up), 253 undergoing Host Discovery
+Parallel DNS resolution of 1 host. Timing: About 0.00% done
+Nmap scan report for 192.168.10.20
+Host is up (0.00045s latency).
+Not shown: 98 closed udp ports (port-unreach)
+PORT   STATE         SERVICE
+53/udp open          domain
+69/udp open|filtered tftp
+MAC Address: 00:0C:29:6A:B4:8B (VMware)
+
+Nmap scan report for 192.168.10.30
+Host is up (0.0010s latency).
+All 100 scanned ports on 192.168.10.30 are in ignored states.
+Not shown: 100 closed udp ports (port-unreach)
+MAC Address: 00:0C:29:B1:CE:95 (VMware)
+
+Nmap scan report for 192.168.10.10
+Host is up (0.0000030s latency).
+All 100 scanned ports on 192.168.10.10 are in ignored states.
+Not shown: 100 closed udp ports (port-unreach)
+
+Nmap done: 254 IP addresses (3 hosts up) scanned in 136.01 seconds
+```
+
+Test SYN des adresses renseignées dans IpList avec tous les ports:
+
+```
+nmap -sS -iL IpList -p 0-65535
+```
+```
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-16 05:40 EDT
+Stats: 0:00:03 elapsed; 0 hosts completed (0 up), 2 undergoing ARP Ping Scan
+Parallel DNS resolution of 2 hosts. Timing: About 0.00% done
+Nmap scan report for 192.168.10.20
+Host is up (0.0030s latency).
+Not shown: 65506 closed tcp ports (reset)
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+23/tcp    open  telnet
+25/tcp    open  smtp
+53/tcp    open  domain
+80/tcp    open  http
+111/tcp   open  rpcbind
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+512/tcp   open  exec
+513/tcp   open  login
+514/tcp   open  shell
+1099/tcp  open  rmiregistry
+1524/tcp  open  ingreslock
+2049/tcp  open  nfs
+2121/tcp  open  ccproxy-ftp
+3306/tcp  open  mysql
+3632/tcp  open  distccd
+5432/tcp  open  postgresql
+5900/tcp  open  vnc
+6000/tcp  open  X11
+6667/tcp  open  irc
+6697/tcp  open  ircs-u
+8009/tcp  open  ajp13
+8180/tcp  open  unknown
+8787/tcp  open  msgsrvr
+41869/tcp open  unknown
+44167/tcp open  unknown
+44522/tcp open  unknown
+51807/tcp open  unknown
+MAC Address: 00:0C:29:6A:B4:8B (VMware)
+
+Nmap scan report for 192.168.10.30
+Host is up (0.00084s latency).
+Not shown: 65526 closed tcp ports (reset)
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+5357/tcp  open  wsdapi
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49156/tcp open  unknown
+49187/tcp open  unknown
+MAC Address: 00:0C:29:B1:CE:95 (VMware)
+
+Nmap done: 2 IP addresses (2 hosts up) scanned in 36.01 seconds
+```
+
+Test de connexion TCP sur le port 80:
+
+```
+nmap -sT -iL IpList -p 80
+```
+```
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-16 05:48 EDT
+Nmap scan report for 192.168.10.20
+Host is up (0.00023s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 00:0C:29:6A:B4:8B (VMware)
+
+Nmap scan report for 192.168.10.30
+Host is up (0.00032s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+MAC Address: 00:0C:29:B1:CE:95 (VMware)
+
+Nmap done: 2 IP addresses (2 hosts up) scanned in 13.11 seconds
+```
+
+##### hping3
+
+Test de plusieurs ports avec SYN:
+
+```
+hping3 192.168.10.20 --scan 21,80,443 -S -V
+```
+```
+using eth0, addr: 192.168.10.10, MTU: 1500
+Scanning 192.168.10.20 (192.168.10.20), port 21,80,443
+3 ports to scan, use -V to see all the replies
++----+-----------+---------+---+-----+-----+-----+
+|port| serv name |  flags  |ttl| id  | win | len |
++----+-----------+---------+---+-----+-----+-----+
+   21 ftp        : .S..A...  64     0  5840    46
+   80 http       : .S..A...  64     0  5840    46
+  443 https      : ..R.A...  64     0     0    46
+All replies received. Done.
+Not responding ports: 
+```
+
+Ajout de la vérification d'ID relative:
+
+```
+hping3 -S -r 192.168.10.20
+```
+```
+HPING 192.168.10.20 (eth0 192.168.10.20): S set, 40 headers + 0 data bytes
+len=46 ip=192.168.10.20 ttl=64 DF id=0 sport=0 flags=RA seq=0 win=0 rtt=7.8 ms
+len=46 ip=192.168.10.20 ttl=64 DF id=+0 sport=0 flags=RA seq=1 win=0 rtt=3.4 ms
+len=46 ip=192.168.10.20 ttl=64 DF id=+0 sport=0 flags=RA seq=2 win=0 rtt=7.1 ms
+len=46 ip=192.168.10.20 ttl=64 DF id=+0 sport=0 flags=RA seq=3 win=0 rtt=7.0 ms
+^C
+--- 192.168.10.20 hping statistic ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 3.4/6.3/7.8 ms
+```
+```
+hping3 -S -r 192.168.10.30
+```
+```
+PING 192.168.10.30 (eth0 192.168.10.30): S set, 40 headers + 0 data bytes
+len=46 ip=192.168.10.30 ttl=128 DF id=896 sport=0 flags=RA seq=0 win=0 rtt=3.7 ms
+len=46 ip=192.168.10.30 ttl=128 DF id=+1 sport=0 flags=RA seq=1 win=0 rtt=6.5 ms
+len=46 ip=192.168.10.30 ttl=128 DF id=+1 sport=0 flags=RA seq=2 win=0 rtt=3.3 ms
+len=46 ip=192.168.10.30 ttl=128 DF id=+1 sport=0 flags=RA seq=3 win=0 rtt=2.7 ms
+^C
+--- 192.168.10.30 hping statistic ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 2.7/4.1/6.5 ms
+```
+
+La machie Windows a une ID incrémentée, signifiant une potentielle exploitation possible en tant que relais pour nmap. 
+
+##### dmitry
+
+```
+dmitry -p 192.168.10.20
+```
+```
+Deepmagic Information Gathering Tool
+"There be some deep magic going on"
+
+ERROR: Unable to locate Host Name for 192.168.10.20
+Continuing with limited modules
+HostIP:192.168.10.20
+HostName:
+
+Gathered TCP Port information for 192.168.10.20
+---------------------------------
+
+ Port           State
+
+21/tcp          open
+22/tcp          open
+23/tcp          open
+25/tcp          open
+53/tcp          open
+80/tcp          open
+111/tcp         open
+139/tcp         open
+
+Portscan Finished: Scanned 150 ports, 141 ports were in state closed
+
+
+All scans completed, exiting
+```
+
+##### Test nmap zombie
+
+Utilisation de la machine Windows pour effectuer un scan nmap:
+
+```
+nmap -sI 192.168.10.30 192.168.10.20
+```
+```
+WARNING: Many people use -Pn w/Idlescan to prevent pings from their true IP.  On the other hand, timing info Nmap gains from pings can allow for faster, more reliable scans.
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-16 06:11 EDT
+Idle scan using zombie 192.168.10.30 (192.168.10.30:443); Class: Incremental
+Nmap scan report for 192.168.10.20
+Host is up (0.051s latency).
+Not shown: 978 closed|filtered tcp ports (no-ipid-change)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+1099/tcp open  rmiregistry
+1524/tcp open  ingreslock
+2121/tcp open  ccproxy-ftp
+3306/tcp open  mysql
+5432/tcp open  postgresql
+5900/tcp open  vnc
+6000/tcp open  X11
+6667/tcp open  irc
+8009/tcp open  ajp13
+8180/tcp open  unknown
+MAC Address: 00:0C:29:6A:B4:8B (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 33.98 seconds
+```
+
+#### Phase active - prise d'empreintes
+
+##### netcat
+
+```
+nc -vn 192.168.10.20 22
+```
+```
+(UNKNOWN) [192.168.10.20] 22 (ssh) open
+SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1
+
+Protocol mismatch.
+```
+
+Vérification des vulnérabilités sur [CVEdetails.com](https://www.cvedetails.com/vulnerability-list/vendor_id-97/product_id-585/version_id-430455/Openbsd-Openssh-4.7p1.html?page=1&order=1&trc=33&sha=8a498c9f91a4fda2a49f7ca691d7c2e3cd6e210c).
+
+
+##### dmitry
+
+```
+dmitry -bp 192.168.10.20
+```
+```
+Deepmagic Information Gathering Tool
+"There be some deep magic going on"
+
+ERROR: Unable to locate Host Name for 192.168.10.20
+Continuing with limited modules
+HostIP:192.168.10.20
+HostName:
+
+Gathered TCP Port information for 192.168.10.20
+---------------------------------
+
+ Port           State
+
+21/tcp          open
+>> 220 (vsFTPd 2.3.4)
+
+22/tcp          open
+>> SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1
+
+23/tcp          open
+>> ��▒�� ��#��'
+25/tcp          open
+>> 220 metasploitable.localdomain ESMTP Postfix (Ubuntu)
+
+53/tcp          open
+
+Portscan Finished: Scanned 150 ports, 144 ports were in state closed
+
+
+All scans completed, exiting
+```
+
+##### nmap
+
+```
+nmap 192.168.10.20 -O
+```
+```
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-16 06:34 EDT
+Nmap scan report for 192.168.10.20
+Host is up (0.00099s latency).
+Not shown: 977 closed tcp ports (reset)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+1099/tcp open  rmiregistry
+1524/tcp open  ingreslock
+2049/tcp open  nfs
+2121/tcp open  ccproxy-ftp
+3306/tcp open  mysql
+5432/tcp open  postgresql
+5900/tcp open  vnc
+6000/tcp open  X11
+6667/tcp open  irc
+8009/tcp open  ajp13
+8180/tcp open  unknown
+MAC Address: 00:0C:29:6A:B4:8B (VMware)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 16.83 seconds
+```
