@@ -913,5 +913,12 @@ L'attaque ne fonctionne pas, sans doute a cause de l'obsolescence du navigateur 
 
 On essaie a nouveau depuis Kali-même:
 
+!!! warning "Ajouter image"
+
+La sortie est très verbeuse, avec beaucoup de faux positifs, mais en cherchant on trouve le champs de login :
+
+```
+POSSIBLE USERNAME FIELD FOUND: email=didi@chandouidoui.com 
 ```
 
+Malhersuement, le mot de passe reste introuvable, même après avoir lancé une recherche dans le fichier XML exporté. 
