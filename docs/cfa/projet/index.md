@@ -1,6 +1,6 @@
 ---
 title: PROJET
-description: Projet d'etical hacking de fin d'année
+description: Projet d'ethical hacking de fin d'année
 ---
 
 ## Introduction
