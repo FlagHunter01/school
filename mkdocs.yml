@@ -11,7 +11,7 @@ site_url: https://flaghunter01.github.io/school
 repo_url: https://github.com/flaghunter01/school
 # Name of the repo TODO: customize
 repo_name: FlagHunter01/school
-# URL of docs folder FIXME: comment if help not wanted!
+# URL of docs folder TODO: comment if help not wanted!
 edit_uri: edit/main/docs/
 
 
@@ -47,44 +47,12 @@ nav:
         - BDD: m1/cfa/bdd.md
         - Sécurité Linux: m1/cfa/secu.md
         - Virtualisation: m1/cfa/virtu.md
-#    - CCNA 1: cfa/ccna1.md
-#    - CCNA 2:
-#       - cfa/ccna2/index.md
-#       - 1 - Configuration de base des périphériques: cfa/ccna2/1.md
-#       - 2 - Concepts de Commutation: cfa/ccna2/2.md
-#       - 3 - VLANs: cfa/ccna2/3.md
-#       - 4 - Routage inter-VLAN: cfa/ccna2/4.md
-#       - 5 - Concepts du STP: cfa/ccna2/5.md
-#       - 6 - EtherChannel: cfa/ccna2/6.md
-#       - 7 - DHCPv4: cfa/ccna2/7.md
-#       - 8 - SLAAC et DHCPv6: cfa/ccna2/8.md
-#       - 9 - Concepts du FHRP: cfa/ccna2/9.md
-#       - 10 - Concepts de sécurité de LAN: cfa/ccna2/10.md
-#       - 11 - Configuration de la sécurité du commutateur: cfa/ccna2/11.md
-#       - 12 - Concepts WLAN: cfa/ccna2/12.md
-#       - 13 - La configuration WLAN: cfa/ccna2/13.md
-#       - 14 - Concepts de routage: cfa/ccna2/14.md
-#       - 15 - Routage statique IP: cfa/ccna2/15.md
-#       - 16 - Dépannage des routes statiques et par défaut: cfa/ccna2/16.md
-#    - CCNA 3:
-#      - cfa/ccna3/index.md
-#      - 1 - Concepts de l'OSPF a zone unique: cfa/ccna3/1.md
-#      - 2 - Configuration OSPFv2 à zone unique: cfa/ccna3/2.md
-#      - 3 - Concepts de sécurité des réseaux: cfa/ccna3/3.md
-#      - 4 - Concepts de liste de contrôle d'accès (ACL): cfa/ccna3/4.md
-#      - 5 - Configuration de liste de contrôle d'accès pour IPv4: cfa/ccna3/5.md
-#      - 6 - NAT pour IPv4: cfa/ccna3/6.md
-#      - 7 - Concepts WAN: cfa/ccna3/7.md
-#      - 8 - Concepts de VPN et IPSec: cfa/ccna3/8.md
-#      - 9 - Concepts QoS: cfa/ccna3/9.md
-#    - CCNA 3 - REPONSES: cfa/ccna3/rep.md
-#    - Université:
+
       - Université:
         - Réseau: m1/uni/reseau.md
         - Maths: m1/uni/maths.md
         - Sécurité: m1/uni/securite.md
     - Misc: misc.md
-#    - NOTRE PROJET: projet.md
     - Docker: https://flaghunter01.github.io/docker-presentation/
 
 
