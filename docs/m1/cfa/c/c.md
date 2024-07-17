@@ -1,7 +1,6 @@
 ---
 title: Language C
 description: Cours de C
-status: deprecated
 ---
 
 ## Variables, conditions et boucles

@@ -1,7 +1,6 @@
 ---
 title: Maths
 description: Cours de mathématiques et algo
-status: deprecated
 ---
 
 ## TD 1

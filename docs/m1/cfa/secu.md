@@ -1,7 +1,6 @@
 ---
 title: Sécurité Linux
 description: Cours sur la sécurité Linux
-status: deprecated
 ---
 
 !!!warning "Rappel: J'utilise une distribution Bullseye."

@@ -1,7 +1,6 @@
 ---
 title: Anglais
 description:  Cours d'anglais
-status: deprecated
 ---
 
 !!! info "Infos prof"

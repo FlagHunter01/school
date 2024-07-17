@@ -1,7 +1,6 @@
 ---
 title: Bases de données
 description:  Cours de bases de données
-status: deprecated
 ---
 
 

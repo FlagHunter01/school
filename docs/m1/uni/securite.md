@@ -1,7 +1,6 @@
 ---
 title: Sécurité des réseaux
 description: Exercices du cours de sécurité des réseaux
-status: deprecated
 ---
 
 ## TD0

@@ -1,7 +1,6 @@
 ---
 title: Virtualisation - rapport
 description: Rapport pour le cours de virtualisation
-status: deprecated
 ---
 
 !!!info inline end "Prof"

@@ -1,7 +1,6 @@
 ---
 title: Cours de réseau
 description: Exercices du cours de réseaux
-status: deprecated
 ---
 
 !!!info "OS utilisé"
