@@ -23,7 +23,7 @@ L'économie est une **arme**. L'économie sert aussi a la guerre, qui coûte tr�
 
 ## La guerre
 
-On était en lutte contre le terrorisme mondiale depuis 2001. Depuis 2021, le terrorisme est devenu secondaire et la prio stratégique est de retrouver de la masse millitaire en viue d'un conflit de haute intensité. 
+On était en lutte contre le terrorisme mondiale depuis 2001. Depuis 2021, le terrorisme est devenu secondaire et la prio stratégique est de retrouver de la masse millitaire en vue d'un conflit de haute intensité. 
 
 ## Le futur
 
